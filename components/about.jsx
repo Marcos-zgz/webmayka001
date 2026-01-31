@@ -12,7 +12,7 @@ const About = ({ introduction }) => {
 
       {/* EL BOTÓN REAL: Fondo negro, Texto blanco, Enlace a WhatsApp */}
       <a
-        href="https://wa.me/34600000000" 
+        href="https://wa.me/346442673610" 
         target="_blank"
         rel="noopener noreferrer"
         className="bg-[#1A1A1A] text-white !important px-8 py-3 rounded-full text-lg font-medium hover:bg-opacity-90 transition-all shadow-lg"
