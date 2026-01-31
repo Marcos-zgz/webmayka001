@@ -20,7 +20,7 @@ export default function Home() {
             welcome="Hello, I am"
             name="Your Name"
             // mobile avatar
-            introduction="I enjoy creating amazing experiences for people"
+            introduction="¿Buscar claridad en tu vida?"
             callToActionButton="Get In Touch"
             // desktop avatar
           />
