@@ -1,81 +1,72 @@
 import Image from "next/image";
-import Nav from "../components/nav";
-import About from "../components/about";
-import Contact from "../components/contact";
-
-import { Playfair_Display, Montserrat } from "@next/font/google";
-
-const playfair = Playfair_Display({ subsets: ["latin"] });
-const montserrat = Montserrat({ subsets: ["latin"] });
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <div style={{ backgroundColor: '#F5E1D7', minHeight: '100vh', width: '100%', display: 'block' }}>
-      <header style={{ backgroundColor: '#F5E1D7' }}>
-        <Nav logo="MM" />
-      </header>
-      <main style={{ backgroundColor: '#F5E1D7' }}>
-         {/* ... resto del código ... */}
-        {/* SECCIÓN PRINCIPAL: ¿BUSCAS CLARIDAD? */}
-       <section className="py-12 md:py-20 px-6">
- <section className="py-20 px-6 text-center">
- <About
-  welcome="" 
-  name=""    
-  introduction={
-    <p className="text-xl md:text-2xl leading-relaxed text-[#1A1A1A] font-light mb-8">
-      ¿Buscas claridad en tu vida? Une tu intuición y estrategia para alcanzar tu propósito.
-    </p>
-  }
-  callToActionButton={
-    <a 
-      href="https://wa.me/34600000000" // <-- SUSTITUYE POR EL TELÉFONO DE MAYKA (con el 34 delante)
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="inline-block bg-[#1A1A1A] text-white font-medium px-10 py-4 rounded-full hover:bg-gray-800 transition-all shadow-md text-lg"
-    >
-      Hablemos por WhatsApp
-    </a>
-  }
-/>
-</section>
-</section>
+    <div style={{ backgroundColor: '#F5E1D7', minHeight: '100vh', color: '#1A1A1A', margin: 0, padding: 0 }}>
+      <Head>
+        <title>Mayka Menacho</title>
+      </Head>
 
-        {/* SECCIÓN DE SERVICIOS (He simplificado la anterior para que sea elegante) */}
-        <section className="bg-white/30 py-20 px-8 text-center" id="servicios">
-          <h2 className={`text-4xl mb-10 ${playfair.className}`}>Mis Servicios</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="p-6 bg-white/50 rounded-lg shadow-sm">
-              <h3 className="font-bold mb-2">Canalización</h3>
-              <p className="text-sm">Conecta con tu guía interior y recibe mensajes para tu camino.</p>
-            </div>
-            <div className="p-6 bg-white/50 rounded-lg shadow-sm">
-              <h3 className="font-bold mb-2">Terapia</h3>
-              <p className="text-sm">Sana bloqueos y encuentra el equilibrio emocional que necesitas.</p>
-            </div>
-            <div className="p-6 bg-white/50 rounded-lg shadow-sm">
-              <h3 className="font-bold mb-2">Coaching</h3>
-              <p className="text-sm">Estrategia pura aplicada a tus objetivos personales o de negocio.</p>
+      {/* CABECERA LIMPIA (Sin duplicados) */}
+      <nav style={{ padding: '20px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ fontSize: '1.5rem', fontWeight: 'bold', letterSpacing: '2px' }}>MM</div>
+        <div style={{ display: 'flex', gap: '20px', fontWeight: '300' }}>
+          <span>Servicios</span>
+          <span>Contacto</span>
+        </div>
+      </nav>
+      
+      <main className="max-w-6xl mx-auto px-6 pt-10 md:pt-20">
+        <div className="grid lg:grid-cols-2 items-center gap-12">
+          
+          {/* LADO IZQUIERDO: TEXTO Y BOTÓN */}
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+            <p style={{ fontSize: '1.6rem', lineHeight: '1.4', fontWeight: '300', marginBottom: '40px', maxWidth: '500px' }}>
+              ¿Buscas claridad en tu vida? Une tu intuición y estrategia para alcanzar tu propósito.
+            </p>
+
+            {/* BOTÓN CON CONTRASTE BLINDADO */}
+            <a 
+              href="https://wa.me/34600000000" 
+              target="_blank"
+              style={{ 
+                backgroundColor: '#1A1A1A', 
+                padding: '16px 35px', 
+                borderRadius: '50px', 
+                textDecoration: 'none', 
+                display: 'inline-block',
+                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)'
+              }}
+            >
+              <span style={{ 
+                color: '#FFFFFF', 
+                fontSize: '1.1rem', 
+                fontWeight: '600',
+                display: 'block',
+                textAlign: 'center'
+              }}>
+                Hablemos por WhatsApp
+              </span>
+            </a>
+          </div>
+
+          {/* LADO DERECHO: LA FOTO */}
+          <div className="flex justify-center">
+            <div style={{ borderRadius: '20px', overflow: 'hidden', boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}>
+              <Image
+                src="/images/projects-img/big-unsplash-party.png"
+                alt="Mayka Menacho"
+                height={550}
+                width={450}
+                style={{ objectFit: 'cover' }}
+                priority
+              />
             </div>
           </div>
-        </section>
 
-        {/* SECCIÓN CONTACTO */}
-        <section className="py-20" id="contact-me">
-          <Contact
-            title="Contacto"
-            firstPara="¿Lista para dar el siguiente paso?"
-            secondPara="Hablemos sobre cómo puedo acompañarte. Escríbeme a:"
-            email="hola@maykamenacho.com"
-          />
-        </section>
+        </div>
       </main>
-
-      <footer className="py-10 border-t border-black/10">
-        <h2 className="text-center text-xs uppercase tracking-widest">
-          Mayka Menacho © 2026 | Intuición y Estrategia
-        </h2>
-      </footer>
     </div>
   );
 }
