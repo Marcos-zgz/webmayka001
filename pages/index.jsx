@@ -1,150 +1,65 @@
 import Image from "next/image";
-
 import Nav from "../components/nav";
 import About from "../components/about";
-import Projects from "../components/projects";
 import Contact from "../components/contact";
 
-import { Inter } from "@next/font/google";
-const inter = Inter({ subsets: ["latin"], fallback: ["arial"] });
+import { Playfair_Display, Montserrat } from "@next/font/google";
+
+const playfair = Playfair_Display({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div>
+    <div className={`bg-[#F5E1D7] min-h-screen ${montserrat.className}`}>
       <header>
-        <Nav logo="YN" />
+        {/* Aquí he cambiado el logo por sus iniciales */}
+        <Nav logo="MM" />
       </header>
-      <main className={inter.className}>
-        <section className="intro">
+      
+      <main>
+        {/* SECCIÓN PRINCIPAL: ¿BUSCAS CLARIDAD? */}
+        <section className="py-20">
           <About
-            welcome="Hello, I am"
-            name="Your Name"
-            // mobile avatar
-            introduction="¿Buscar claridad en tu vida?"
-            callToActionButton="Get In Touch"
-            // desktop avatar
+            welcome="Bienvenida,"
+            name="Mayka Menacho"
+            introduction="¿Buscas claridad en tu vida? Une tu intuición y estrategia para alcanzar tu propósito."
+            callToActionButton="Hablemos"
           />
         </section>
-        <section className="projects" id="my-projects">
-          <section className="project-one ">
-            <div
-              className="md:mt-20 lg:grid lg:grid-cols-2 lg:justify-items-end lg:gap-x-6 lg:items-center
-            "
-            >
-              {/* project 1 image */}
-              <div className="grid justify-center lg:order-last lg:justify-self-start">
-                <Image
-                  className="lg:max-w-[36rem]"
-                  src="/images/projects-img/big-unsplash-party.png"
-                  alt="image of a celebration"
-                  height={597}
-                  width={701}
-                  priority
-                />
-              </div>
-              <div>
-                {/* project 1 text */}
-                <Projects
-                  title="Project 1"
-                  date="June 2022"
-                  info="Lorem ipsum dolor sit amet consectetur. A posuere in senectus urna diam egestas nisl est malesuada. Ultricies faucibus placerat consequat nisl sapien sem ipsum arcu."
-                />
 
-                {/* more project 1 images */}
-                <div className="grid grid-rows-1 justify-items-center mb-11 ">
-                  <div className="grid grid-cols-2 max-w-xxs gap-x-3 md:max-w-xl  lg:pl-6 ">
-                    <Image
-                      className="h-[6.7rem]
-                      md:h-[13.4rem] lg:h-[13rem]"
-                      src="/images/projects-img/big-pexels-laptop-notes.png"
-                      alt="image of a laptop with a notebook, pen and cup of coffee"
-                      height={213}
-                      width={303}
-                    />
-                    <Image
-                      src="/images/projects-img/big-pexels-camera.png"
-                      alt="image of a camera on a tripod"
-                      height={213}
-                      width={276}
-                    />
-                  </div>
-                </div>
-              </div>
+        {/* SECCIÓN DE SERVICIOS (He simplificado la anterior para que sea elegante) */}
+        <section className="bg-white/30 py-20 px-8 text-center" id="servicios">
+          <h2 className={`text-4xl mb-10 ${playfair.className}`}>Mis Servicios</h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="p-6 bg-white/50 rounded-lg shadow-sm">
+              <h3 className="font-bold mb-2">Canalización</h3>
+              <p className="text-sm">Conecta con tu guía interior y recibe mensajes para tu camino.</p>
             </div>
-          </section>
-          <section className="project-two">
-            <div className="grid justify-center md:mt-20  lg:grid-cols-2 lg:justify-items-end lg:gap-x-6 lg:items-center lg:mb-40 lg:mt-40">
-              {/* project 2 image */}
-              <div className="lg:order-last  lg:justify-self-start">
-                <Image
-                  className="lg:max-w-[36rem]"
-                  src="/images/projects-img/big-unsplash-event-dinner.png"
-                  alt="image of an empty room with tables set up for an event"
-                  height={438}
-                  width={579}
-                />
-              </div>
-
-              {/* project 2 text */}
-              <div className="lg:justify-self-start">
-                <Projects
-                  title="Project 2"
-                  date="Sept 2021"
-                  info="Lorem ipsum dolor sit amet consectetur. Ultricies faucibus placerat consequat nisl sapien sem ipsum arcu."
-                />
-              </div>
-
-              {/* project 2 video */}
-              <iframe
-              className="w-full lg:max-w-xl lg:h-[100%] lg:row-span-2 lg:pl-6 lg:order-first"
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/__O1eATrXI0?si=hgeWL_Hc3Lp_EtiZ"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+            <div className="p-6 bg-white/50 rounded-lg shadow-sm">
+              <h3 className="font-bold mb-2">Terapia</h3>
+              <p className="text-sm">Sana bloqueos y encuentra el equilibrio emocional que necesitas.</p>
             </div>
-          </section>
-          <section className="project-three">
-            <div className="md:mt-20 md:mb-20 md lg:grid lg:grid-cols-1 lg:mb-40">
-              {/** project 3 background image(s)
-               * background image.png was left as support for older browsers which don't display the image.webp
-               */}
-              <div
-                className="bg-[url('/images/projects-img/big-pexels-conference-image.webp')] bg-[url('/images/projects-img/big-pexels-conference-image.png')]  bg-center grid grid-cols-1 mt-11 mb-11 md:h-[49.25rem] lg:w-[72rem] lg:ml-6 lg:justify-self-center lg:rounded-md"
-                loading="lazy"
-                aria-label="background image of an auditorium filled with business people"
-              >
-                {/* project 3 text and black overlay to make text stand out */}
-                <div className="bg-black rounded-[1rem] px-6 bg-opacity-[55%] py-20 lg:rounded-sm">
-                  <div className="grid grid-flow-row justify-items-center">
-                    <Projects
-                      title="Project 3"
-                      date="Dec 2020"
-                      info="Lorem ipsum dolor sit amet consectetur. A posuere in senectus urna diam egestas nisl est malesuada."
-                    />
-                  </div>
-                </div>
-              </div>
+            <div className="p-6 bg-white/50 rounded-lg shadow-sm">
+              <h3 className="font-bold mb-2">Coaching</h3>
+              <p className="text-sm">Estrategia pura aplicada a tus objetivos personales o de negocio.</p>
             </div>
-          </section>
+          </div>
         </section>
-        <section className="contact" id="contact-me">
+
+        {/* SECCIÓN CONTACTO */}
+        <section className="py-20" id="contact-me">
           <Contact
-            title="Contact"
-            firstPara="Interested in creating a new project with me?"
-            secondPara="You can contact me on any social media platform or send me an email at "
-            email="yourname@email.com"
+            title="Contacto"
+            firstPara="¿Lista para dar el siguiente paso?"
+            secondPara="Hablemos sobre cómo puedo acompañarte. Escríbeme a:"
+            email="hola@maykamenacho.com"
           />
         </section>
       </main>
-      <footer className={inter.className}>
-        <h2 className="text-center mt-10 mb-4 text-xs">
-          Copyright 2022 Your Name
+
+      <footer className="py-10 border-t border-black/10">
+        <h2 className="text-center text-xs uppercase tracking-widest">
+          Mayka Menacho © 2026 | Intuición y Estrategia
         </h2>
       </footer>
     </div>
