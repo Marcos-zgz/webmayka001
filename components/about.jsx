@@ -1,27 +1,54 @@
- import React from "react";
+import Image from "next/image";
+import Nav from "../components/nav";
 
-const About = ({ introduction }) => {
+export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center text-center px-4">
-      {/* El texto de introducción con tamaño normal */}
-      <div className="max-w-2xl mb-8">
-        <p className="text-xl md:text-2xl text-[#1A1A1A] leading-relaxed font-light">
-          {introduction}
-        </p>
-      </div>
+    <div style={{ backgroundColor: '#F5E1D7', minHeight: '100vh', color: '#1A1A1A' }}>
+      <header>
+        <Nav logo="MM" />
+      </header>
+      
+      <main className="max-w-6 cotton-mx-auto px-6 pt-20">
+        <div className="grid lg:grid-cols-2 items-center gap-12">
+          
+          {/* LADO IZQUIERDO: TEXTO Y BOTÓN */}
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+            <p style={{ fontSize: '1.5rem', lineHeight: '1.6', fontWeight: '300', marginBottom: '30px' }}>
+              ¿Buscas claridad en tu vida? Une tu intuición y estrategia para alcanzar tu propósito.
+            </p>
 
-      {/* EL BOTÓN REAL: Fondo negro, Texto blanco, Enlace a WhatsApp */}
-      <a
-        href="https://wa.me/+346442673610" 
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-[#1A1A1A] text-white !important px-8 py-3 rounded-full text-lg font-medium hover:bg-opacity-90 transition-all shadow-lg"
-        style={{ color: 'white', backgroundColor: '#1A1A1A', textDecoration: 'none' }}
-      >
-        Hablemos
-      </a>
+            <a 
+              href="https://wa.me/+34644267361" 
+              target="_blank" 
+              style={{ 
+                backgroundColor: '#1A1A1A', 
+                color: '#FFFFFF', 
+                padding: '15px 40px', 
+                borderRadius: '50px', 
+                textDecoration: 'none', 
+                fontSize: '1.1rem',
+                fontWeight: '500',
+                display: 'inline-block'
+              }}
+            >
+              Hablemos por WhatsApp
+            </a>
+          </div>
+
+          {/* LADO DERECHO: LA FOTO RECUPERADA */}
+          <div className="flex justify-center">
+            <Image
+              className="rounded-2xl shadow-xl"
+              src="/images/projects-img/big-unsplash-party.png" // Esta es la foto que venía por defecto
+              alt="Mayka Menacho"
+              height={500}
+              width={500}
+              priority
+            />
+          </div>
+
+        </div>
+      </main>
     </div>
   );
-};
-
-export default About;
+}
