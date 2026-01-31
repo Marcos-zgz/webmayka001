@@ -10,12 +10,12 @@ module.exports = {
       maxWidth: {
         xxs: "18rem",
       },
-      gradientColorStops: (theme) => ({
-        aqua: "rgba(118, 237, 237, 0.9)",
-        lavender: "rgba(81, 0, 252, 0.9)",
-        ...theme("colors"),
-      }),
+      // Definimos los colores de Mayka para poder usarlos en toda la web
+      colors: {
+        nude: "#F5E1D7",
+        carbon: "#1A1A1A",
+      },
     },
-    plugins: [],
   },
+  plugins: [],
 };
