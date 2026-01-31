@@ -17,14 +17,21 @@ export default function Home() {
       <main style={{ backgroundColor: '#F5E1D7' }}>
          {/* ... resto del código ... */}
         {/* SECCIÓN PRINCIPAL: ¿BUSCAS CLARIDAD? */}
-        <section className="py-20">
-          <About
-            welcome="Bienvenida,"
-            name="Mayka Menacho"
-            introduction="¿Buscas claridad y estrategia?"
-            callToActionButton="Hablemos"
-          />
-        </section>
+       <section className="py-12 md:py-20 px-6">
+  <div className="max-w-4xl mx-auto text-center">
+    <About
+      welcome={<span className="text-lg font-light text-slate-600">Bienvenida,</span>}
+      name={<h1 className="text-4xl md:text-5xl font-serif my-4">Mayka Menacho</h1>}
+      introduction={
+        <p className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-slate-700 font-light">
+          ¿Buscas claridad en tu vida? Une tu intuición y estrategia para alcanzar tu propósito. 
+          Acompaño a personas y organizaciones a encontrar su equilibrio.
+        </p>
+      }
+      callToActionButton="Hablemos"
+    />
+  </div>
+</section>
 
         {/* SECCIÓN DE SERVICIOS (He simplificado la anterior para que sea elegante) */}
         <section className="bg-white/30 py-20 px-8 text-center" id="servicios">
