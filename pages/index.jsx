@@ -30,7 +30,7 @@ export default function Home() {
       }
       callToActionButton={
         <a 
-          href="https://wa.me/34tu_numero_aqui" 
+          href="https://wa.me/34644267361" 
           className="bg-[#1A1A1A] text-white px-8 py-3 rounded-full hover:bg-opacity-80 transition-all shadow-lg inline-block text-lg"
         >
           Hablemos
