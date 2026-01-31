@@ -19,25 +19,25 @@ export default function Home() {
         {/* SECCIÓN PRINCIPAL: ¿BUSCAS CLARIDAD? */}
        <section className="py-12 md:py-20 px-6">
  <section className="py-20 px-6 text-center">
-  <div className="max-w-3xl mx-auto">
-    <About
-      welcome="" // Lo dejamos vacío para suprimirlo
-      name=""    // Lo dejamos vacío para suprimirlo
-      introduction={
-        <p className="text-xl md:text-2xl leading-relaxed text-[#1A1A1A] font-light mb-8">
-          ¿Buscas claridad en tu vida? Une tu intuición y estrategia para alcanzar tu propósito.
-        </p>
-      }
-      callToActionButton={
-        <a 
-          href="https://wa.me/34644267361" 
-          className="bg-[#1A1A1A] text-white px-8 py-3 rounded-full hover:bg-opacity-80 transition-all shadow-lg inline-block text-lg"
-        >
-          Hablemos
-        </a>
-      }
-    />
-  </div>
+ <About
+  welcome="" 
+  name=""    
+  introduction={
+    <p className="text-xl md:text-2xl leading-relaxed text-[#1A1A1A] font-light mb-8">
+      ¿Buscas claridad en tu vida? Une tu intuición y estrategia para alcanzar tu propósito.
+    </p>
+  }
+  callToActionButton={
+    <a 
+      href="https://wa.me/34600000000" // <-- SUSTITUYE POR EL TELÉFONO DE MAYKA (con el 34 delante)
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="inline-block bg-[#1A1A1A] text-white font-medium px-10 py-4 rounded-full hover:bg-gray-800 transition-all shadow-md text-lg"
+    >
+      Hablemos por WhatsApp
+    </a>
+  }
+/>
 </section>
 </section>
 
