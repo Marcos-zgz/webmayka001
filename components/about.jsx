@@ -1,77 +1,27 @@
-import Link from "next/link";
-import Image from "next/image";
-import desktopAvatar from "../public/images/about-img/big-pexels-girl-smiling-square.png";
-import mobileAvatar from "../public/images/about-img/pexels-girl-smiling-circle-small.png";
+ import React from "react";
 
-import { Norican } from "@next/font/google";
-const norican = Norican({
-  weight: "400",
-  subsets: ["latin"],
-  fallback: ["brush script m7"],
-});
-
-export default function About({
-  welcome,
-  name,
-  introduction,
-  callToActionButton,
-}) {
+const About = ({ introduction }) => {
   return (
-    <div
-      className="grid grid-flow-rows justify-items-center
-     lg:grid-cols-2 lg:justify-items-end
-     lg:gap-x-6 lg:mt-20"
-    >
-      <div className="contents lg:grid lg:content-center">
-        <h1 className="text-5xl pb-2 mt-11 md:text-6xl lg:pl-8 lg:text-6xl">
-          {welcome}
-        </h1>
-        <>
-          <div className={norican.className}>
-            <h1
-              className="text-7xl text-center pb-4 px-2 bg-gradient-to-r from-aqua to-lavender inline-block text-transparent bg-clip-text md:text-8xl md: pr-8
-          lg:text-9xl lg:text-left lg:pl-4 lg:pb-6 lg:leading-[10rem]"
-            >
-              {name}
-            </h1>
-          </div>
-        </>
-
-        {/* only displays this circular avatar on mobile */}
-        <div className="py-7 justify-self-center lg:hidden">
-          <Image src={mobileAvatar} alt="circular avatar of a woman smiling" />
-        </div>
-
-        {/*Decrease font-size and increase padding and decrease max-width to change text placement*/}
-        <h1
-          className="text-[2.4rem] max-w-xxs pb-3.5 leading-[2.8rem] 
-      md:max-w-md
-      md:mb-2
-      lg:grid  lg:max-w-xl lg:max-h-80 lg:text-5xl lg:leading-[4.5rem] lg:pl-8"
-        >
+    <div className="flex flex-col items-center justify-center text-center px-4">
+      {/* El texto de introducción con tamaño normal */}
+      <div className="max-w-2xl mb-8">
+        <p className="text-xl md:text-2xl text-[#1A1A1A] leading-relaxed font-light">
           {introduction}
-        </h1>
-        <div
-          className="
-      bg-gradient-to-r from-aqua to-lavender w-72 text-center text-2xl p-[0.18rem] rounded-md mb-11 mt-4
-      md:w-[28rem] lg:ml-8 hover:scale-110 transition ease-in-out delay-200 "
-        >
-          <Link href="#contact-me">
-            <div className="bg-gradient-to-r from-[#080344] via-[#0E0946] to-[#080344] p-4 rounded-md lg:text-3xl hover:scale-100 hover:cursor-pointer">
-              <button>{callToActionButton}</button>
-            </div>
-          </Link>
-        </div>
+        </p>
       </div>
 
-      {/* only displays this square avatar on large screens */}
-      <div className="hidden lg:grid lg:my-10 lg:justify-self-start">
-        <Image
-          src={desktopAvatar}
-          alt="square avatar of a woman smiling"
-          priority
-        />
-      </div>
+      {/* EL BOTÓN REAL: Fondo negro, Texto blanco, Enlace a WhatsApp */}
+      <a
+        href="https://wa.me/34600000000" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-[#1A1A1A] text-white !important px-8 py-3 rounded-full text-lg font-medium hover:bg-opacity-90 transition-all shadow-lg"
+        style={{ color: 'white', backgroundColor: '#1A1A1A', textDecoration: 'none' }}
+      >
+        Hablemos
+      </a>
     </div>
   );
-}
+};
+
+export default About;
