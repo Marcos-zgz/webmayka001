@@ -10,13 +10,12 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className={`bg-[#F5E1D7] min-h-screen ${montserrat.className}`}>
-      <header>
-        {/* Aquí he cambiado el logo por sus iniciales */}
+    <div style={{ backgroundColor: '#F5E1D7', minHeight: '100vh', width: '100%', display: 'block' }}>
+      <header style={{ backgroundColor: '#F5E1D7' }}>
         <Nav logo="MM" />
       </header>
-      
-      <main>
+      <main style={{ backgroundColor: '#F5E1D7' }}>
+         {/* ... resto del código ... */}
         {/* SECCIÓN PRINCIPAL: ¿BUSCAS CLARIDAD? */}
         <section className="py-20">
           <About
