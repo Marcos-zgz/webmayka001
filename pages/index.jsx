@@ -20,8 +20,8 @@ export default function Home() {
        <section className="py-12 md:py-20 px-6">
   <div className="max-w-4xl mx-auto text-center">
     <About
-      {*  welcome={<span className="text-lg font-light text-slate-600">Bienvenida,</span>}
-      name={<h1 className="text-4xl md:text-5xl font-serif my-4">Mayka Menacho</h1>} *}
+      {/*  welcome={<span className="text-lg font-light text-slate-600">Bienvenida,</span>}
+      name={<h1 className="text-4xl md:text-5xl font-serif my-4">Mayka Menacho</h1>} */}
       introduction={
         <p className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-slate-700 font-light">
           ¿Buscas claridad en tu vida? Une tu intuición y estrategia para alcanzar tu propósito. 
