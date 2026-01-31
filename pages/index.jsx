@@ -18,19 +18,27 @@ export default function Home() {
          {/* ... resto del código ... */}
         {/* SECCIÓN PRINCIPAL: ¿BUSCAS CLARIDAD? */}
        <section className="py-12 md:py-20 px-6">
-  <div className="max-w-4xl mx-auto text-center">
+ <section className="py-20 px-6 text-center">
+  <div className="max-w-3xl mx-auto">
     <About
-      {/*  welcome={<span className="text-lg font-light text-slate-600">Bienvenida,</span>}
-      name={<h1 className="text-4xl md:text-5xl font-serif my-4">Mayka Menacho</h1>} */}
+      welcome="" // Lo dejamos vacío para suprimirlo
+      name=""    // Lo dejamos vacío para suprimirlo
       introduction={
-        <p className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-slate-700 font-light">
-          ¿Buscas claridad en tu vida? Une tu intuición y estrategia para alcanzar tu propósito. 
-          Acompaño a personas y organizaciones a encontrar su equilibrio.
+        <p className="text-xl md:text-2xl leading-relaxed text-[#1A1A1A] font-light mb-8">
+          ¿Buscas claridad en tu vida? Une tu intuición y estrategia para alcanzar tu propósito.
         </p>
       }
-      callToActionButton="Hablemos"
+      callToActionButton={
+        <a 
+          href="https://wa.me/34tu_numero_aqui" 
+          className="bg-[#1A1A1A] text-white px-8 py-3 rounded-full hover:bg-opacity-80 transition-all shadow-lg inline-block text-lg"
+        >
+          Hablemos
+        </a>
+      }
     />
   </div>
+</section>
 </section>
 
         {/* SECCIÓN DE SERVICIOS (He simplificado la anterior para que sea elegante) */}
