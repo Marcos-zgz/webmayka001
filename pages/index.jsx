@@ -104,7 +104,21 @@ export default function Home() {
     ))}
   </div>
 </section>
-
+<section id="contacto" style={{ maxWidth: '800px', margin: '0 auto', padding: '100px 20px', textAlign: 'center' }}>
+  <h2 style={{ fontSize: '1.2rem', fontWeight: '400', marginBottom: '30px', letterSpacing: '3px' }}>CONTACTO</h2>
+  <p style={{ fontSize: '1rem', lineHeight: '1.8', marginBottom: '40px', color: '#333' }}>
+    ¿Tienes alguna duda o quieres agendar una sesión? <br/>
+    Escríbeme y estaré encantada de acompañarte en tu proceso.
+  </p>
+  <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+    <a href="mailto:hola@maykamenacho.com" style={{ border: '1px solid #1A1A1A', color: '#1A1A1A', padding: '12px 25px', borderRadius: '50px', textDecoration: 'none', fontSize: '0.8rem', fontWeight: '600', letterSpacing: '1px' }}>
+      EMAIL
+    </a>
+    <a href="https://wa.me/tu-numero-aqui" target="_blank" rel="noreferrer" style={{ backgroundColor: '#1A1A1A', color: '#FFF', padding: '12px 25px', borderRadius: '50px', textDecoration: 'none', fontSize: '0.8rem', fontWeight: '600', letterSpacing: '1px' }}>
+      WHATSAPP
+    </a>
+  </div>
+</section>
       <footer style={{ padding: '60px 20px', textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
         &copy; 2026 Mayka Menacho
       </footer>
