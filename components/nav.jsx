@@ -32,46 +32,35 @@ export default function Nav({ logo }) {
   ];
 
   return (
-<div className="flex justify-between bg-[#F5E1D7]/90 backdrop-blur-md border-b-[0.025rem] border-b-neutral-200/20 fixed min-w-full top-0 z-[100000]">
-    {/* TEXTO MAYKA MENACHO */}
-<div className="ml-6 mt-6 lg:mt-8">
-  <Link href="/">
-    <h1 
-      className={norican.className} 
-      style={{ 
-        fontSize: '1.8rem', 
-        color: '#1A1A1A', 
-        cursor: 'pointer',
-        letterSpacing: '1px'
-      }}
-    >
-      Mayka Menacho
-    </h1>
-  </Link>
-</div>
+    <div className="flex justify-between bg-[#FFF0EB]/90 backdrop-blur-md border-b-[0.025rem] border-b-neutral-200/20 fixed min-w-full top-0 z-[100000]">
+      <div className="ml-6 mt-6 lg:mt-8">
+        <Link href="/">
+          <span className={norican.className} style={{ fontSize: '1.8rem', color: '#1A1A1A', cursor: 'pointer' }}>
+            Mayka Menacho
+          </span>
+        </Link>
+      </div>
       
- <div onClick={handleNavOpen} className="fixed right-0 mr-6 mt-4 z-[100001] cursor-pointer">
-  <button>
-    <Image
-      src="/assets/Menu-Icon.svg"
-      height={50} // Un poco más ajustado para que quede fino en ambos
-      width={50}
-      alt="menu icon"
-    />
-  </button>
-</div>
+      <div onClick={handleNavOpen} className="fixed right-0 mr-6 mt-4 z-[100001] cursor-pointer">
+        <button>
+          <Image
+            src="/assets/Menu-Icon.svg"
+            height={50}
+            width={50}
+            alt="menu icon"
+          />
+        </button>
+      </div>
 
-      {/* mobile nav - AHORA LILA */}
       <div className={inter.className}>
         <nav
           className={
             navOpen
-? "bg-[#ECE1ED] border-l-[0.025rem] border-l-neutral-200/10 min-h-screen fixed right-0 min-w-[320px] grid grid-flow-row justify-items-center content-start gap-y-10 z-[100000] shadow-[0_0_50px_rgba(0,0,0,0.2)]"
-: "hidden"
+              ? "bg-[#ECE1ED] border-l-[0.025rem] border-l-neutral-200/10 min-h-screen fixed right-0 min-w-[320px] grid grid-flow-row justify-items-center content-start gap-y-10 z-[100000] shadow-[0_0_50px_rgba(0,0,0,0.2)] overflow-y-auto"
+              : "hidden"
           }
         >
-         
-          <ul className="grid grid-flow-row justify-items-center text-sm gap-y-6 px-10 pt-10 uppercase tracking-widest">
+          <ul className="grid grid-flow-row justify-items-center text-sm gap-y-6 px-10 pt-24 uppercase tracking-widest text-[#1A1A1A]">
             {menuItems.map((item, i) => (
               <li key={i} className="hover:opacity-50 transition-opacity">
                 <Link href={item.l} onClick={handleNavOpen}>{item.n}</Link>
@@ -80,8 +69,6 @@ export default function Nav({ logo }) {
           </ul>
         </nav>
       </div>
-
-     
     </div>
   );
 }
