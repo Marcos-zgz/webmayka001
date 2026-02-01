@@ -18,37 +18,40 @@ export default function Home() {
               Une tu intuición y estrategia para alcanzar tu propósito.
             </p>
 
-          {/* BOTÓN CON TEXTO FORZADO */}
+       {/* SECCIÓN WHATSAPP CON ICONO */}
 <div style={{ marginTop: '30px' }}>
   <a 
-    href="https://wa.me/+34644267361" 
+    href="https://wa.me/+34644267361" // Pon aquí el número de Mayka
     target="_blank"
+    rel="noopener noreferrer"
     style={{ 
-      display: 'inline-flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: '#1A1A1A', 
-      padding: '15px 35px', 
-      borderRadius: '50px', 
+      display: 'inline-flex', 
+      alignItems: 'center', 
+      gap: '12px', 
       textDecoration: 'none',
-      minWidth: '200px',
-      border: 'none',
-      boxShadow: '0 4px 10px rgba(0,0,0,0.2)'
+      transition: 'transform 0.2s ease'
     }}
+    onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+    onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
   >
-    <strong style={{ 
-      color: '#FFFFFF !important', 
-      fontSize: '18px', 
-      fontWeight: 'bold',
-      textTransform: 'none',
-      letterSpacing: '0.5px',
-      WebkitTextFillColor: 'white' // Para navegadores que bloquean el color simple
+    {/* ICONO DE WHATSAPP */}
+    <img 
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+      alt="WhatsApp" 
+      style={{ width: '40px', height: '40px' }}
+    />
+    
+    {/* TEXTO AL LADO */}
+    <span style={{ 
+      color: '#1A1A1A', 
+      fontSize: '1.2rem', 
+      fontWeight: '500',
+      borderBottom: '1px solid #1A1A1A' // Una sutil línea debajo para que se sepa que es un link
     }}>
-      Hablemos por WhatsApp
-    </strong>
+      Contactar por WhatsApp
+    </span>
   </a>
 </div>
-
           {/* IMAGEN */}
           <div className="flex-1 flex justify-center">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
