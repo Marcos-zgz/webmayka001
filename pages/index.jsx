@@ -62,8 +62,9 @@ export default function Home() {
         </div>
       </main>
 
+   {/* SECCIÓN SERVICIOS */}
       <section id="servicios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '100px 20px' }}>
-        <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>SERVICIOS</h2>
+        <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>SERVICIOS</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '30px' }}>
           {servicios.map((s, i) => (
             <div key={i} style={{ padding: '30px 20px', backgroundColor: '#FFFFFF', borderRadius: '8px', textAlign: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.05)', border: '2px solid #FFFFFF' }}>
@@ -77,8 +78,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECCIÓN TESTIMONIOS */}
       <section id="testimonios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '100px 20px' }}>
-        <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>LO QUE DICEN DE MÍ</h2>
+        <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>TESTIMONIOS</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
           {testimonios.map((t, i) => (
             <div key={i} style={{ padding: '40px 30px', borderRadius: '12px', border: '2px solid #FFFFFF', backgroundColor: 'transparent', boxShadow: 'inset 0 0 0 1000px #ECE1ED, 0 15px 35px rgba(0,0,0,0.1)' }}>
@@ -88,7 +90,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-
+      
       <section id="contacto" style={{ scrollMarginTop: '100px', maxWidth: '1100px', margin: '80px auto', padding: '60px 20px', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '40px', justifyContent: 'center' }}>
         <div style={{ flex: '1', minWidth: '300px', padding: '40px', borderRadius: '20px', backgroundColor: '#ECE1ED', border: '1px solid rgba(0,0,0,0.1)' }}>
           <h2 style={{ fontSize: '2rem', fontFamily: 'serif', marginBottom: '20px' }}>Contacto</h2>
