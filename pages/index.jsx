@@ -78,19 +78,24 @@ export default function Home() {
   </div>
 </section>
 
-{/* SECCIÓN TESTIMONIOS (CON FORZADO DE COLOR AZUL) */}
+{/* SECCIÓN TESTIMONIOS (SOLUCIÓN AL BLOQUEO DEL INSPECTOR) */}
 <section id="testimonios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '100px 20px' }}>
-  <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>Testimonios</h2>
+  <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>LO QUE DICEN DE M&Iacute;</h2>
   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
     {testimonios.map((t, i) => (
       <div key={i} style={{ 
-        backgroundColor: '#BDE0FE', // Fondo azul forzado
-        borderRadius: '12px', 
-        padding: '2px', // Este espacio crea el reborde blanco si el de abajo es blanco
-        border: '2px solid #FFFFFF',
+        padding: '2px', 
+        backgroundColor: '#FFFFFF', // El borde blanco exterior
+        borderRadius: '12px',
         boxShadow: '0 15px 35px rgba(0,0,0,0.1)'
       }}>
-        <div style={{ padding: '35px 25px', backgroundColor: '#BDE0FE', borderRadius: '10px' }}>
+        {/* ESTE DIV INTERNO ES EL QUE LLEVARÁ EL AZUL SÍ O SÍ */}
+        <div style={{ 
+          backgroundColor: '#BDE0FE', 
+          padding: '40px 30px', 
+          borderRadius: '10px',
+          height: '100%'
+        }}>
           <p style={{ fontSize: '1rem', fontStyle: 'italic', lineHeight: '1.7', marginBottom: '25px', color: '#1A1A1A' }}>
             "{t.t}"
           </p>
