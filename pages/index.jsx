@@ -75,7 +75,7 @@ export default function Home() {
           {testimonios.map((t, i) => (
             <div key={i} style={{ 
               padding: '35px 30px', 
-              backgroundColor: '#D0E9FF', // Azul cielo sólido para que SÍ se vea el color
+              backgroundColor: '#A2D2FF', // Un azul más vibrante para asegurar que cambia
               borderRadius: '8px', 
               boxShadow: '0 10px 25px rgba(0,0,0,0.06)', // Sombra un poco más marcada para el efecto flotante
               display: 'flex',
