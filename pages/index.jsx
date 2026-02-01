@@ -86,7 +86,7 @@ export default function Home() {
               <p style={{ fontSize: '1rem', fontStyle: 'italic', lineHeight: '1.7', marginBottom: '25px', color: '#2C3E50' }}>
                 "{t.t}"
               </p>
-              <p style={{ fontSize: '0.9rem', fontWeight: '700', color: '#1A1A1A', textTransform: 'uppercase', letterSpacing: '1px' }}>
+              <p style={{ fontSize: '0.9rem', fontWeight: '600', color: '#1A1A1A', textTransform: 'uppercase', letterSpacing: '1px' }}>
                 - {t.n}
               </p>
             </div>
