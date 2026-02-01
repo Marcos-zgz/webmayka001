@@ -54,7 +54,7 @@ export default function Home() {
 
           <div style={{ width: '100%', maxWidth: '500px' }}>
             <img 
-              src="/assets/mayka-cara.jpg" 
+              src="/assets/mayka.jpg" 
               alt="Mayka Menacho" 
               style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}
             />
