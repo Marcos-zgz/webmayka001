@@ -33,20 +33,22 @@ export default function Nav({ logo }) {
 
   return (
 <div className="flex justify-between bg-[#F5E1D7]/90 backdrop-blur-md border-b-[0.025rem] border-b-neutral-200/20 fixed min-w-full top-0 z-[100000]">
-      {/* LOGO */}
-      <div className="ml-6 mt-2 lg:mt-4">
-        <Link href="/">
-          <Image 
-            src="/assets/logo-mayka.jpg" 
-            alt="Mayka Menacho Logo"
-            width={100} 
-            height={100}
-            priority
-            className="hover:scale-105 transition-transform duration-300"
-            style={{ borderRadius: '50%' }}
-          />
-        </Link>
-      </div>
+    {/* TEXTO MAYKA MENACHO */}
+<div className="ml-6 mt-6 lg:mt-8">
+  <Link href="/">
+    <h1 
+      className={norican.className} 
+      style={{ 
+        fontSize: '1.8rem', 
+        color: '#1A1A1A', 
+        cursor: 'pointer',
+        letterSpacing: '1px'
+      }}
+    >
+      Mayka Menacho
+    </h1>
+  </Link>
+</div>
       
  <div onClick={handleNavOpen} className="fixed right-0 mr-6 mt-4 z-[100001] cursor-pointer">
   <button>
