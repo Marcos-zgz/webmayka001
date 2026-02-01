@@ -50,46 +50,54 @@ export default function Home() {
         </div>
       </main>
 
-      {/* SECCIÓN SERVICIOS (TARJETAS BLANCAS) */}
-      <section id="servicios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '60px 20px' }}>
-        <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>SERVICIOS</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '30px' }}>
-          {servicios.map((s, i) => (
-            <div key={i} style={{ padding: '30px 20px', backgroundColor: '#FFFFFF', borderRadius: '8px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', textAlign: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.05)' }}>
-              <div>
-                <h3 style={{ fontSize: '1rem', marginBottom: '15px', fontWeight: 'bold' }}>{s.t}</h3>
-                <p style={{ fontSize: '0.9rem', lineHeight: '1.5', color: '#666', marginBottom: '25px' }}>{s.d}</p>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <a href={s.p} style={{ backgroundColor: 'rgba(189, 224, 254, 0.6)', color: '#1A1A1A', padding: '8px 20px', borderRadius: '50px', textDecoration: 'none', fontSize: '0.75rem', fontWeight: '700' }}>SABER M&Aacute;S</a>
-              </div>
-            </div>
-          ))}
+    {/* SECCIÓN SERVICIOS (CON REBORDE BLANCO) */}
+<section id="servicios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '60px 20px' }}>
+  <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>SERVICIOS</h2>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '30px' }}>
+    {servicios.map((s, i) => (
+      <div key={i} style={{ 
+        padding: '30px 20px', 
+        backgroundColor: '#FFFFFF', 
+        borderRadius: '8px', 
+        display: 'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'space-between', 
+        textAlign: 'center', 
+        boxShadow: '0 10px 20px rgba(0,0,0,0.05)',
+        border: '2px solid #FFFFFF' // Reborde blanco añadido
+      }}>
+        <div>
+          <h3 style={{ fontSize: '1rem', marginBottom: '15px', fontWeight: 'bold' }}>{s.t}</h3>
+          <p style={{ fontSize: '0.9rem', lineHeight: '1.5', color: '#666', marginBottom: '25px' }}>{s.d}</p>
         </div>
-      </section>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <a href={s.p} style={{ backgroundColor: '#BDE0FE', color: '#1A1A1A', padding: '8px 20px', borderRadius: '50px', textDecoration: 'none', fontSize: '0.75rem', fontWeight: '700' }}>SABER M&Aacute;S</a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
 
-    {/* SECCIÓN TESTIMONIOS (AZUL SÓLIDO TOTAL) */}
+{/* SECCIÓN TESTIMONIOS (CON FORZADO DE COLOR AZUL) */}
 <section id="testimonios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '100px 20px' }}>
   <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>LO QUE DICEN DE M&Iacute;</h2>
   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
     {testimonios.map((t, i) => (
       <div key={i} style={{ 
-        padding: '40px 30px', 
-        backgroundColor: '#BDE0FE', // Azul cielo sólido
-        backgroundImage: 'none', // Quitamos cualquier posible degradado heredado
-        borderRadius: '8px', 
-        boxShadow: '0 15px 35px rgba(0,0,0,0.1)', 
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        border: '2px solid #FFFFFF' // Borde blanco para separar del fondo rosa
+        backgroundColor: '#BDE0FE', // Fondo azul forzado
+        borderRadius: '12px', 
+        padding: '2px', // Este espacio crea el reborde blanco si el de abajo es blanco
+        border: '2px solid #FFFFFF',
+        boxShadow: '0 15px 35px rgba(0,0,0,0.1)'
       }}>
-        <p style={{ fontSize: '1rem', fontStyle: 'italic', lineHeight: '1.7', marginBottom: '25px', color: '#1A1A1A' }}>
-          "{t.t}"
-        </p>
-        <p style={{ fontSize: '0.85rem', fontWeight: '800', color: '#1A1A1A', textTransform: 'uppercase' }}>
-          - {t.n}
-        </p>
+        <div style={{ padding: '35px 25px', backgroundColor: '#BDE0FE', borderRadius: '10px' }}>
+          <p style={{ fontSize: '1rem', fontStyle: 'italic', lineHeight: '1.7', marginBottom: '25px', color: '#1A1A1A' }}>
+            "{t.t}"
+          </p>
+          <p style={{ fontSize: '0.85rem', fontWeight: '800', color: '#1A1A1A', textTransform: 'uppercase' }}>
+            - {t.n}
+          </p>
+        </div>
       </div>
     ))}
   </div>
