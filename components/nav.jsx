@@ -32,7 +32,7 @@ export default function Nav({ logo }) {
   ];
 
   return (
-    <div className="flex justify-between bg-[#FFF0EB]/90 backdrop-blur-md border-b-[0.025rem] border-b-neutral-200/20 fixed min-w-full top-0 z-[100000]">
+    <div className="flex justify-between bg-[#F7E9E3]/90 backdrop-blur-md border-b-[0.025rem] border-b-neutral-200/20 fixed min-w-full top-0 z-[100000]">
       <div className="ml-6 mt-6 lg:mt-8">
         <Link href="/">
           <span className={norican.className} style={{ fontSize: '1.8rem', color: '#1A1A1A', cursor: 'pointer' }}>
