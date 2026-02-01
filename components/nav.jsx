@@ -66,7 +66,7 @@ export default function Nav({ logo }) {
             onClick={handleNavOpen}
             className="justify-self-end mr-6 mt-6 text-2xl hover:text-sky-400 cursor-pointer"
           >
-            <button>✕</button>
+          
           </div>
           <ul className="grid grid-flow-row justify-items-center text-sm gap-y-6 px-10 pt-10 uppercase tracking-widest">
             {menuItems.map((item, i) => (
