@@ -105,7 +105,7 @@ export default function Home() {
           <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style={{ width: '32px' }} /></a>
           <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" style={{ width: '32px' }} /></a>
           <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" style={{ width: '35px' }} /></a>
-          <a href="https://wa.me/34644267361"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style={{ width: '32px' }} /></a>
+          <a href="https://wa.me/+34644267361"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style={{ width: '32px' }} /></a>
         </div>
 
         <div style={{ flex: '1', minWidth: '300px', display: 'flex', justifyContent: 'center' }}>
