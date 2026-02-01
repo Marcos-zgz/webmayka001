@@ -4,80 +4,66 @@ export default function Nav({ logo }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: "Quién soy", link: "/quien-soy" },
-    { name: "Entrevistas", link: "/entrevistas" },
-    { name: "Talk to Mayka", link: "/talk-to-mayka" },
-    { name: "Consultoría Organizacional", link: "/consultoria" },
-    { name: "Mensajes del Más Allá", link: "/mensajes" },
-    { name: "Canalización a Distancia", link: "/canalizacion" },
-    { name: "Regresiones", link: "/regresiones" },
-    { name: "Análisis de Sueños", link: "/suenos" },
-    { name: "Talleres en Grupo", link: "/talleres" },
-    { name: "Terapia del Duelo", link: "/duelo" },
-    { name: "Contacto", link: "#contacto" },
+    "Quién soy", "Entrevistas", "Talk to Mayka", "Consultoría Organizacional", 
+    "Mensajes del Más Allá", "Canalización a Distancia", "Regresiones", 
+    "Análisis de Sueños", "Talleres en Grupo", "Terapia del Duelo", "Contacto"
   ];
 
   return (
     <>
+      {/* BARRA SUPERIOR */}
       <nav style={{ 
-        position: 'fixed', top: 0, width: '100%', zIndex: 2000, 
+        position: 'fixed', top: 0, left: 0, width: '100%', height: '80px',
         display: 'flex', justifyContent: 'space-between', alignItems: 'center', 
-        padding: '20px 40px', backgroundColor: 'rgba(245, 225, 215, 0.9)', 
-        backdropFilter: 'blur(10px)',
-        boxSizing: 'border-box'
+        padding: '0 40px', backgroundColor: 'rgba(245, 225, 215, 0.95)',
+        zIndex: 5000, boxSizing: 'border-box'
       }}>
-        {/* LOGO */}
-        <div style={{ fontSize: '1.4rem', fontWeight: 'bold', letterSpacing: '2px', color: '#1A1A1A' }}>
+        <div style={{ fontSize: '1.2rem', fontWeight: 'bold', letterSpacing: '2px', color: '#1A1A1A' }}>
           {logo}
         </div>
         
-        {/* BOTÓN HAMBURGUESA (FORZADO VISIBLE) */}
-        <div onClick={() => setIsOpen(!isOpen)} style={{ cursor: 'pointer', zIndex: 2100, padding: '10px' }}>
-          <div style={{ width: '25px', height: '2px', backgroundColor: '#1A1A1A', margin: '6px 0', transition: '0.3s', transform: isOpen ? 'rotate(45deg) translate(6px, 6px)' : '' }}></div>
-          <div style={{ width: '25px', height: '2px', backgroundColor: '#1A1A1A', margin: '6px 0', opacity: isOpen ? 0 : 1 }}></div>
-          <div style={{ width: '25px', height: '2px', backgroundColor: '#1A1A1A', margin: '6px 0', transition: '0.3s', transform: isOpen ? 'rotate(-45deg) translate(6px, -6px)' : '' }}></div>
+        {/* BOTÓN HAMBURGUESA */}
+        <div onClick={() => setIsOpen(!isOpen)} style={{ cursor: 'pointer', zIndex: 5001 }}>
+          <div style={{ width: '25px', height: '2px', backgroundColor: '#1A1A1A', margin: '5px 0' }}></div>
+          <div style={{ width: '25px', height: '2px', backgroundColor: '#1A1A1A', margin: '5px 0' }}></div>
+          <div style={{ width: '25px', height: '2px', backgroundColor: '#1A1A1A', margin: '5px 0' }}></div>
         </div>
       </nav>
 
-      {/* PANEL LATERAL */}
+      {/* MENÚ LATERAL LILA */}
       <div style={{
-        position: 'fixed', top: 0, right: isOpen ? 0 : '-100%', 
+        position: 'fixed', top: 0, right: isOpen ? '0' : '-100%', 
         width: '300px', height: '100vh', 
-        backgroundColor: '#ECE1ED', 
+        backgroundColor: '#ECE1ED', // TU LILA
         boxShadow: '-10px 0 30px rgba(0,0,0,0.1)',
-        transition: 'right 0.4s cubic-bezier(0.19, 1, 0.22, 1)',
+        transition: '0.4s ease-in-out',
         display: 'flex', flexDirection: 'column', 
-        padding: '100px 40px', boxSizing: 'border-box',
-        zIndex: 1999,
-        overflowY: 'auto' // Por si la lista es larga en móviles
+        padding: '100px 30px', boxSizing: 'border-box',
+        zIndex: 4999, overflowY: 'auto'
       }}>
         {menuItems.map((item, index) => (
           <a 
             key={index} 
-            href={item.link} 
+            href="#" 
             onClick={() => setIsOpen(false)}
             style={{ 
-              textDecoration: 'none', 
-              color: '#1A1A1A', 
-              fontSize: '0.85rem', 
-              fontWeight: '400', 
-              marginBottom: '18px',
-              letterSpacing: '1.5px',
-              fontFamily: 'sans-serif',
-              opacity: 0.8
+              textDecoration: 'none', color: '#1A1A1A', 
+              fontSize: '0.75rem', fontWeight: '500', 
+              marginBottom: '20px', letterSpacing: '1.5px',
+              textTransform: 'uppercase', fontFamily: 'sans-serif'
             }}
           >
-            {item.name.toUpperCase()}
+            {item}
           </a>
         ))}
       </div>
 
-      {/* FONTO OSCURO AL ABRIR */}
+      {/* FONDO OSCURO (Si está abierto) */}
       {isOpen && (
-        <div 
-          onClick={() => setIsOpen(false)} 
-          style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'rgba(0,0,0,0.1)', zIndex: 1998 }}
-        ></div>
+        <div onClick={() => setIsOpen(false)} style={{
+          position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
+          backgroundColor: 'rgba(0,0,0,0.2)', zIndex: 4998
+        }}></div>
       )}
     </>
   );
