@@ -1,95 +1,73 @@
-import Image from "next/image";
-import Link from "next/link";
-
-import { Norican } from "@next/font/google";
-import { useState } from "react";
-const norican = Norican({
-  weight: "400",
-  subsets: ["latin"],
-  fallback: ["brush script m7"],
-});
-
-import { Inter } from "@next/font/google";
-const inter = Inter({ subsets: ["latin"], fallback: ["arial"] });
+import React, { useState } from 'react';
 
 export default function Nav({ logo }) {
-  const [navOpen, setNavOpen] = useState(false);
-  const handleNavOpen = () => {
-    setNavOpen(!navOpen);
-    
-  };
+  const [isOpen, setIsOpen] = useState(false);
+
+  const menuItems = [
+    { name: "Quién soy", link: "/quien-soy" },
+    { name: "Entrevistas", link: "/entrevistas" },
+    { name: "Talk to Mayka", link: "/talk-to-mayka" },
+    { name: "Consultoría Organizacional", link: "/consultoria" },
+    { name: "Mensajes del Más Allá", link: "/mensajes" },
+    { name: "Canalización a Distancia", link: "/canalizacion" },
+    { name: "Regresiones", link: "/regresiones" },
+    { name: "Análisis de Sueños", link: "/suenos" },
+    { name: "Talleres en Grupo", link: "/talleres" },
+    { name: "Terapia del Duelo", link: "/duelo" },
+    { name: "Contacto", link: "#contacto" },
+  ];
+
   return (
-    <div className="flex justify-between lg:bg-gradient-to-r from-[#080344]/50 via-[#0E0946]/50 to-[#080344]/50 lg:backdrop-blur-md lg:border-b-[0.025rem] lg:border-b-neutral-200/5 lg:fixed lg:min-w-full lg:top-0 ">
-      <div className="ml-6 mt-4 lg:mt-8">
-        <div className={norican.className}>
-          <h1 className="bg-gradient-to-r from-aqua to-lavender inline-block text-transparent bg-clip-text pb-4">
-            <Link href="/">{logo}</Link>
-          </h1>
-        </div>
-      </div>
-      <div onClick={handleNavOpen} className=" fixed right-0 mr-6 mt-4">
-        <button>
-          <Image
-            className="lg:hidden"
-            src="/assets/Menu-Icon.svg"
-            height={60}
-            width={60}
-            alt="menu icon"
-          />
-        </button>
+    <nav style={{ 
+      position: 'fixed', top: 0, width: '100%', zIndex: 1000, 
+      display: 'flex', justifyContent: 'space-between', alignItems: 'center', 
+      padding: '20px 40px', backgroundColor: 'rgba(245, 225, 215, 0.8)', // Fondo nude con transparencia
+      backdropFilter: 'blur(10px)' 
+    }}>
+      <div style={{ fontSize: '1.5rem', fontWeight: 'bold', letterSpacing: '2px' }}>{logo}</div>
+      
+      {/* BOTÓN HAMBURGUESA */}
+      <div onClick={() => setIsOpen(!isOpen)} style={{ cursor: 'pointer', zIndex: 1100 }}>
+        <div style={{ width: '25px', height: '2px', backgroundColor: '#1A1A1A', margin: '5px 0', transition: '0.3s', transform: isOpen ? 'rotate(45deg) translate(5px, 5px)' : '' }}></div>
+        <div style={{ width: '25px', height: '2px', backgroundColor: '#1A1A1A', margin: '5px 0', opacity: isOpen ? 0 : 1 }}></div>
+        <div style={{ width: '25px', height: '2px', backgroundColor: '#1A1A1A', margin: '5px 0', transition: '0.3s', transform: isOpen ? 'rotate(-45deg) translate(5px, -5px)' : '' }}></div>
       </div>
 
-      {/* mobile nav */}
-      <div onClick={handleNavOpen} className={norican.className}>
-        <nav
-          className={
-            navOpen
-              ? " bg-gradient-to-r from-[#080344]/50 via-[#0E0946]/50 to-[#080344]/50 backdrop-blur-md border-l-[0.025rem] border-l-neutral-200/5 min-h-screen fixed right-0  min-w-[50%] grid grid-flow-row justify-items-center content-start gap-y-10  lg:hidden"
-              : "hidden"
-          }
-        >
-          <div
-            onClick={handleNavOpen}
-            className="justify-self-end mr-6 mt-4 text-3xl md:text-4xl hover:text-sky-400"
+      {/* PANEL LATERAL (EL MENÚ) */}
+      <div style={{
+        position: 'fixed', top: 0, right: isOpen ? 0 : '-100%', 
+        width: '300px', height: '100vh', 
+        backgroundColor: '#ECE1ED', // TU NUEVO COLOR MORADO SUAVE
+        boxShadow: '-10px 0 30px rgba(0,0,0,0.05)',
+        transition: 'right 0.4s ease-in-out',
+        display: 'flex', flexDirection: 'column', 
+        padding: '100px 40px', boxSizing: 'border-box'
+      }}>
+        {menuItems.map((item, index) => (
+          <a 
+            key={index} 
+            href={item.link} 
+            onClick={() => setIsOpen(false)}
+            style={{ 
+              textDecoration: 'none', 
+              color: '#1A1A1A', 
+              fontSize: '0.9rem', // FUENTE MÁS PEQUEÑA Y ELEGANTE
+              fontWeight: '300', 
+              marginBottom: '20px',
+              letterSpacing: '1px',
+              fontFamily: 'Helvetica, Arial, sans-serif', // MÁS LEGIBLE
+              transition: 'opacity 0.2s'
+            }}
+            onMouseOver={(e) => e.target.style.opacity = 0.5}
+            onMouseOut={(e) => e.target.style.opacity = 1}
           >
-            <button className={inter.className}>X</button>
-          </div>
-          <ul className="grid grid-flow-row justify-items-center text-3xl md:text-5xl gap-y-8 md:gap-y-10">
-            <li className="justify-self-start hover:underline underline-offset-8 decoration-2  decoration-neutral-200/90 ">
-              <Link href="/">Home</Link>
-            </li>
-            <li className="hover:underline underline-offset-8 decoration-2  decoration-neutral-200/90">
-              <Link href="#my-projects">Projects</Link>
-            </li>
-            <li className=" hover:underline underline-offset-8 decoration-2  decoration-neutral-200/90">
-              <Link href="#contact-me">Contact</Link>
-            </li>
-          </ul>
-        </nav>
+            {item.name.toUpperCase()}
+          </a>
+        ))}
       </div>
 
-      {/* desktop nav */}
-      <div className={norican.className}>
-        <nav className="hidden lg:grid">
-          <ul
-            className="
-          grid grid-flow-col justify-items-center  text-4xl gap-x-16 items-center mr-10 mt-8"
-          >
-            <li
-              className="
-            hover:underline underline-offset-8 decoration-2 decoration-neutral-200/90"
-            >
-              <Link href="#my-projects">Projects</Link>
-            </li>
-            <li
-              className="
-            hover:underline underline-offset-8 decoration-2 decoration-neutral-200/90"
-            >
-              <Link href="#contact-me">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+      {/* OVERLAY PARA CERRAR AL HACER CLIC FUERA */}
+      {isOpen && <div onClick={() => setIsOpen(false)} style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'rgba(0,0,0,0.02)' }}></div>}
+    </nav>
   );
 }
