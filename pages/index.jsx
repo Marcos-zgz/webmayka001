@@ -25,193 +25,100 @@ export default function Home() {
   ];
 
   return (
-    <div style={{ backgroundColor: '#F7E9E3', minHeight: '100vh', color: '#1A1A1A', margin: 0, padding: 0, fontFamily: 'sans-serif', scrollBehavior: 'smooth' }}>
+    <div style={{ backgroundColor: '#FFFFFF', minHeight: '100vh', color: '#1A1A1A', margin: 0, padding: 0, fontFamily: 'sans-serif', scrollBehavior: 'smooth' }}>
       <Head>
         <title>Mayka Menacho</title>
       </Head>
 
-      <Nav logo="MM" />
+      <Nav />
       
       {/* SECCIÓN HERO (BIENVENIDA) */}
-    <main style={{ maxWidth: '1100px', margin: '0 auto', paddingTop: '100px', paddingLeft: '20px', paddingRight: '20px' }}>
-  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '40px' }}>
-    
-    {/* 1. EL LOGO (Grande y protagonista) */}
-    <div style={{ width: '100%', maxWidth: '300px' }}>
-      <Image 
-        src="/assets/logo-mayka.jpg" 
-        alt="Logo Mayka Menacho" 
-        width={300} 
-        height={300} 
-        priority
-        style={{ borderRadius: '50%' }}
-      />
-    </div>
+      <main style={{ maxWidth: '1100px', margin: '0 auto', paddingTop: '160px', paddingLeft: '20px', paddingRight: '20px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '50px' }}>
+          
+          {/* 1. EL LOGO (Protagonista) */}
+          <div style={{ width: '100%', maxWidth: '280px' }}>
+            <Image 
+              src="/assets/logo-mayka.jpg" 
+              alt="Logo Mayka Menacho" 
+              width={280} 
+              height={280} 
+              priority
+              style={{ borderRadius: '50%', boxShadow: '0 10px 40px rgba(0,0,0,0.03)' }}
+            />
+          </div>
 
-    {/* 2. EL TEXTO DE BIENVENIDA */}
-    <div style={{ maxWidth: '700px' }}>
-      <p style={{ fontSize: '1.4rem', lineHeight: '1.6', color: '#1A1A1A', fontFamily: 'sans-serif' }}>
-        "Tu mensaje de bienvenida aquí, conectando con tu esencia y propósito..."
-      </p>
-    </div>
+          {/* 2. EL TEXTO DE BIENVENIDA */}
+          <div style={{ maxWidth: '750px' }}>
+            <p style={{ fontSize: '1.5rem', lineHeight: '1.6', color: '#1A1A1A', fontWeight: '300', fontStyle: 'italic' }}>
+              "Acompaño tu proceso de transformación conectando con tu esencia más profunda para dar luz a tu camino."
+            </p>
+          </div>
 
-    {/* 3. FOTO DE CARA DE MAYKA */}
-    <div style={{ width: '100%', maxWidth: '500px' }}>
-      <img 
-        src="/assets/mayka-cara.jpg" // Asegúrate de subir esta nueva foto con este nombre
-        alt="Mayka Menacho" 
-        style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}
-      />
-    </div>
-
-  </div>
-</main>
-
-    {/* SECCIÓN SERVICIOS (CON REBORDE BLANCO) */}
-<section id="servicios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '60px 20px' }}>
-  <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>SERVICIOS</h2>
-  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '30px' }}>
-    {servicios.map((s, i) => (
-      <div key={i} style={{ 
-        padding: '30px 20px', 
-        backgroundColor: '#FFFFFF', 
-        borderRadius: '8px', 
-        display: 'flex', 
-        flexDirection: 'column', 
-        justifyContent: 'space-between', 
-        textAlign: 'center', 
-        boxShadow: '0 10px 20px rgba(0,0,0,0.05)',
-        border: '2px solid #FFFFFF' // Reborde blanco añadido
-      }}>
-        <div>
-          <h3 style={{ fontSize: '1rem', marginBottom: '15px', fontWeight: 'bold' }}>{s.t}</h3>
-          <p style={{ fontSize: '0.9rem', lineHeight: '1.5', color: '#666', marginBottom: '25px' }}>{s.d}</p>
+          {/* 3. FOTO DE CARA DE MAYKA */}
+          <div style={{ width: '100%', maxWidth: '450px', marginBottom: '40px' }}>
+            <img 
+              src="/assets/mayka-cara.jpg" 
+              alt="Mayka Menacho" 
+              style={{ width: '100%', borderRadius: '30px', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}
+            />
+          </div>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <a href={s.p} style={{ backgroundColor: '#BDE0FE', color: '#1A1A1A', padding: '8px 20px', borderRadius: '50px', textDecoration: 'none', fontSize: '0.75rem', fontWeight: '700' }}>SABER M&Aacute;S</a>
+      </main>
+
+      {/* SECCIÓN SERVICIOS */}
+      <section id="servicios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '100px 20px' }}>
+        <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '60px', textAlign: 'center', letterSpacing: '3px' }}>SERVICIOS</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px' }}>
+          {servicios.map((s, i) => (
+            <div key={i} style={{ padding: '40px 25px', backgroundColor: '#FAF3F2', borderRadius: '15px', textAlign: 'center', border: '1px solid rgba(0,0,0,0.03)' }}>
+              <h3 style={{ fontSize: '1.1rem', marginBottom: '15px', fontWeight: '600', letterSpacing: '1px' }}>{s.t}</h3>
+              <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: '#555', marginBottom: '30px' }}>{s.d}</p>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <a href={s.p} style={{ backgroundColor: '#1A1A1A', color: '#FFFFFF', padding: '10px 25px', borderRadius: '50px', textDecoration: 'none', fontSize: '0.75rem', fontWeight: '600', letterSpacing: '1px' }}>SABER MÁS</a>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    ))}
-  </div>
-</section>
+      </section>
 
-{/* SECCIÓN TESTIMONIOS (INMUNE A REGLAS EXTERNAS) */}
-<section id="testimonios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '100px 20px' }}>
-  <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>LO QUE DICEN DE M&Iacute;</h2>
-  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
-    {testimonios.map((t, i) => (
-      <div key={i} style={{ 
-        padding: '40px 30px', 
-        borderRadius: '12px', 
-        border: '2px solid #FFFFFF', // Tu reborde blanco
-        backgroundColor: 'transparent', // Cumplimos con la regla externa...
-        /* ¡PERO añadimos el azul mediante una sombra interna! */
-        boxShadow: 'inset 0 0 0 1000px #E1EAED, 0 15px 35px rgba(0,0,0,0.1)',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center'
-      }}>
-        <p style={{ fontSize: '1rem', fontStyle: 'italic', lineHeight: '1.7', marginBottom: '25px', color: '#1A1A1A' }}>
-          "{t.t}"
-        </p>
-        <p style={{ fontSize: '0.85rem', fontWeight: '800', color: '#1A1A1A', textTransform: 'uppercase' }}>
-          - {t.n}
-        </p>
-      </div>
-    ))}
-  </div>
-</section>
-{/* SECCIÓN CONTACTO (ESTRUCTURA ORIGINAL ACTUALIZADA) */}
-<section id="contacto" style={{ 
-  scrollMarginTop: '100px', // <--- Esto deja aire para que el Nav no lo tape
-  maxWidth: '1100px', 
-  margin: '80px auto', 
-  padding: '60px 20px',
-  display: 'flex',
-  flexWrap: 'wrap',
-  alignItems: 'center',
-  gap: '40px',
-  justifyContent: 'center'
-}}>
-  {/* BLOQUE IZQUIERDO: CUADRO DE TEXTO */}
-  <div style={{ 
-    flex: '1', 
-    minWidth: '300px', 
-    border: '1px solid rgba(26, 26, 26, 0.1)', 
-    padding: '40px', 
-    borderRadius: '20px',
-    backgroundColor: '#ECE1ED', // El lila del menú para dar coherencia
-    boxShadow: '0 10px 30px rgba(0,0,0,0.05)'
-  }}>
-    <h2 style={{ 
-      fontSize: '2rem', 
-      fontFamily: 'Norican, cursive', 
-      marginBottom: '20px',
-      color: '#1A1A1A' 
-    }}>Contacto</h2>
-    <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#1A1A1A', letterSpacing: '0.5px' }}>
-      ¿Interesado en comenzar un nuevo proceso conmigo?<br/>
-      Puedes encontrarme en mis redes sociales o escribirme directamente a:
-      <br/><br/>
-      <a href="mailto:maykamenacholopez@gmail.com" style={{ 
-        fontSize: '1.1rem', 
-        fontWeight: '600', 
-        color: '#1A1A1A',
-        textDecoration: 'underline',
-        textUnderlineOffset: '4px'
-      }}>
-        maykamenacholopez@gmail.com
-      </a>
-    </p>
-  </div>
+      {/* SECCIÓN TESTIMONIOS */}
+      <section id="testimonios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '80px 20px' }}>
+        <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '60px', textAlign: 'center', letterSpacing: '3px' }}>TESTIMONIOS</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px' }}>
+          {testimonios.map((t, i) => (
+            <div key={i} style={{ padding: '45px 35px', borderRadius: '20px', backgroundColor: '#FFFFFF', border: '1px solid #FAF3F2', boxShadow: '0 15px 30px rgba(0,0,0,0.02)' }}>
+              <p style={{ fontSize: '1.05rem', fontStyle: 'italic', lineHeight: '1.8', color: '#333' }}>"{t.t}"</p>
+              <p style={{ fontSize: '0.85rem', fontWeight: '700', marginTop: '25px', color: '#1A1A1A' }}>— {t.n}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-  {/* BLOQUE CENTRAL: ICONOS REDES SOCIALES */}
-  <div style={{ 
-    display: 'flex', 
-    flexDirection: 'column', 
-    gap: '25px',
-    alignItems: 'center',
-    padding: '0 20px'
-  }}>
-    {/* Instagram */}
-    <a href="AQUÍ_TU_ENLACE" target="_blank" rel="noreferrer" style={{ transition: 'transform 0.3s' }}>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style={{ width: '32px' }} />
-    </a>
-<a href="AQUÍ_TU_ENLACE" target="_blank" rel="noreferrer">
-  <img 
-    src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" 
-    alt="TikTok" 
-    style={{ width: '32px', height: '32px' }} 
-  />
-</a>
+      {/* SECCIÓN CONTACTO */}
+      <section id="contacto" style={{ scrollMarginTop: '100px', maxWidth: '1100px', margin: '100px auto', padding: '80px 20px', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '60px', justifyContent: 'center' }}>
+        <div style={{ flex: '1', minWidth: '320px', padding: '50px', borderRadius: '25px', backgroundColor: '#FAF3F2' }}>
+          <h2 style={{ fontSize: '2.2rem', fontFamily: 'serif', marginBottom: '25px' }}>Contacto</h2>
+          <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#333' }}>
+            ¿Sientes que es el momento? Escríbeme y hablemos sobre cómo puedo acompañarte.<br/><br/>
+            <a href="mailto:maykamenacholopez@gmail.com" style={{ fontWeight: '600', color: '#1A1A1A', textDecoration: 'underline' }}>maykamenacholopez@gmail.com</a>
+          </p>
+        </div>
 
-    {/* YouTube */}
-    <a href="AQUÍ_TU_ENLACE" target="_blank" rel="noreferrer">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" style={{ width: '35px' }} />
-    </a>
-    {/* WhatsApp */}
-    <a href="https://wa.me/34644267361" target="_blank" rel="noreferrer">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style={{ width: '32px' }} />
-    </a>
-  </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '25px', alignItems: 'center' }}>
+          <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style={{ width: '35px' }} /></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" style={{ width: '35px' }} /></a>
+          <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" style={{ width: '40px' }} /></a>
+          <a href="https://wa.me/34644267361"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style={{ width: '35px' }} /></a>
+        </div>
 
-  {/* BLOQUE DERECHO: FOTO */}
-  <div style={{ flex: '1', minWidth: '300px', display: 'flex', justifyContent: 'center' }}>
-    <img 
-      src="/images/projects-img/big-unsplash-party.png" 
-      alt="Mayka Menacho" 
-      style={{ 
-        width: '100%', 
-        maxWidth: '380px', 
-        borderRadius: '15px', 
-        filter: 'grayscale(20%)',
-        boxShadow: '0 15px 35px rgba(0,0,0,0.1)' 
-      }} 
-    />
-  </div>
-</section>
-      <footer style={{ padding: '60px 20px', textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
-        &copy; 2026 Mayka Menacho
+        <div style={{ flex: '1', minWidth: '320px', display: 'flex', justifyContent: 'center' }}>
+          <img src="/images/projects-img/big-unsplash-party.png" alt="Mayka Menacho" style={{ width: '100%', maxWidth: '400px', borderRadius: '20px', boxShadow: '0 20px 50px rgba(0,0,0,0.08)' }} />
+        </div>
+      </section>
+
+      <footer style={{ padding: '60px 20px', textAlign: 'center', opacity: 0.4, fontSize: '0.8rem', letterSpacing: '1px' }}>
+        &copy; 2026 MAYKA MENACHO
       </footer>
     </div>
   );
