@@ -159,10 +159,14 @@ export default function Home() {
     <a href="AQUÍ_TU_ENLACE" target="_blank" rel="noreferrer" style={{ transition: 'transform 0.3s' }}>
       <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style={{ width: '32px' }} />
     </a>
-    {/* TikTok */}
-    <a href="AQUÍ_TU_ENLACE" target="_blank" rel="noreferrer">
-      <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" style={{ width: '32px' }} />
-    </a>
+  {/* TikTok Redondo */}
+<a href="AQUÍ_TU_ENLACE" target="_blank" rel="noreferrer">
+  <img 
+    src="https://upload.wikimedia.org/wikipedia/commons/e/ef/TikTok_logo.svg" 
+    alt="TikTok" 
+    style={{ width: '32px', height: '32px', borderRadius: '50%' }} 
+  />
+</a>
     {/* YouTube */}
     <a href="AQUÍ_TU_ENLACE" target="_blank" rel="noreferrer">
       <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" style={{ width: '35px' }} />
