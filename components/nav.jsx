@@ -32,14 +32,19 @@ export default function Nav({ logo }) {
   ];
 
   return (
-    <div className="flex justify-between bg-[#F5E1D7]/90 backdrop-blur-md border-b-[0.025rem] border-b-neutral-200/20 fixed min-w-full top-0 z-[100000]">
-      <div className="ml-6 mt-4 lg:mt-8">
-        <div className={norican.className}>
-          <h1 className="text-[#1A1A1A] pb-4 text-2xl">
-            <Link href="/">{logo}</Link>
-          </h1>
-        </div>
-      </div>
+  {/* LUGAR DEL LOGO */}
+<div className="ml-6 mt-2 lg:mt-4">
+  <Link href="/">
+    <Image 
+      src="/assets/perfil mayka.jpg" // Asegúrate de que la ruta sea correcta
+      alt="Mayka Menacho Logo"
+      width={120}  // Ajusta el tamaño según prefieras
+      height={120}
+      className="hover:scale-105 transition-transform duration-300"
+      style={{ borderRadius: '50%' }} // Por si acaso para asegurar el círculo
+    />
+  </Link>
+</div>
       
  <div onClick={handleNavOpen} className="fixed right-0 mr-6 mt-4 z-[100001] cursor-pointer">
   <button>
