@@ -85,7 +85,7 @@ export default function Consultoria() {
         {/* BOTÓN WHATSAPP */}
         <div style={{ marginTop: '60px', textAlign: 'center' }}>
           <p style={{ marginBottom: '20px' }}>Si quieres más información, contacta conmigo por whatsapp o por email.</p>
-          <a href="https://wa.me/34644267361" style={{ 
+          <a href="https://wa.me/+34644267361" style={{ 
             backgroundColor: '#25D366', color: '#FFFFFF', padding: '14px 35px', borderRadius: '50px', 
             textDecoration: 'none', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '10px' 
           }}>
