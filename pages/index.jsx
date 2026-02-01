@@ -83,7 +83,7 @@ export default function Home() {
         <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>TESTIMONIOS</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
           {testimonios.map((t, i) => (
-            <div key={i} style={{ padding: '40px 30px', borderRadius: '12px', border: '2px solid #FFFFFF', backgroundColor: 'transparent', boxShadow: 'inset 0 0 0 1000px #ECE1ED, 0 15px 35px rgba(0,0,0,0.1)' }}>
+            <div key={i} style={{ padding: '40px 30px', borderRadius: '12px', border: '2px solid #FFFFFF', backgroundColor: 'transparent', boxShadow: 'inset 0 0 0 1000px #EBF8FF, 0 15px 35px rgba(0,0,0,0.1)' }}>
               <p style={{ fontSize: '1rem', fontStyle: 'italic', lineHeight: '1.7', marginBottom: '25px' }}>"{t.t}"</p>
               <p style={{ fontSize: '0.85rem', fontWeight: '800' }}>- {t.n}</p>
             </div>
