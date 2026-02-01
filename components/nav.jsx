@@ -57,8 +57,8 @@ export default function Nav({ logo }) {
         <nav
           className={
             navOpen
-  ? "bg-[#ECE1ED] border-l-[0.025rem] border-l-neutral-200/5 min-h-screen fixed right-0 min-w-[320px] grid grid-flow-row justify-items-center content-start gap-y-10 z-[100000] shadow-xl"
-  : "hidden"
+? "bg-[#ECE1ED] border-l-[0.025rem] border-l-neutral-200/10 min-h-screen fixed right-0 min-w-[320px] grid grid-flow-row justify-items-center content-start gap-y-10 z-[100000] shadow-[0_0_50px_rgba(0,0,0,0.2)]"
+: "hidden"
           }
         >
          
