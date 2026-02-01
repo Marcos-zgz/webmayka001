@@ -166,7 +166,7 @@ export default function Home() {
     style={{ width: '32px', height: '32px' }} 
   />
 </a>
-</a>
+
     {/* YouTube */}
     <a href="AQUÍ_TU_ENLACE" target="_blank" rel="noreferrer">
       <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" style={{ width: '35px' }} />
