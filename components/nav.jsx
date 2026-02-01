@@ -20,7 +20,7 @@ export default function Nav({ logo }) {
   const menuItems = [
     { n: "Quién soy", l: "/quien-soy" },
     { n: "Entrevistas", l: "/entrevistas" },
-    { n: "Talk to Mayka", l: "/talk-to-mayka" },
+    { n: "Conversaciones con Mayka", l: "/conversaciones" },
     { n: "Consultoría Organizacional", l: "/consultoria" },
     { n: "Mensajes del Más Allá", l: "/mensajes" },
     { n: "Canalización a Distancia", l: "/canalizacion" },
