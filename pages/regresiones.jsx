@@ -57,7 +57,7 @@ export default function Regresiones() {
           <h2 style={{ fontWeight: 'bold', marginBottom: '20px' }}>PIDE TU CITA</h2>
           
           <a 
-            href="https://wa.me/34644267361?text=Hola%20Mayka,%20me%20gustaría%20información%20sobre%20la%20Terapia%20Regresiva" 
+            href="https://wa.me/+34644267361?text=Hola%20Mayka,%20me%20gustaría%20información%20sobre%20la%20Terapia%20Regresiva" 
             target="_blank" 
             rel="noopener noreferrer"
             style={{ 
