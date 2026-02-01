@@ -104,6 +104,7 @@ export default function Home() {
     ))}
   </div>
 </section>
+{/* SECCIÓN CONTACTO (ESTRUCTURA ORIGINAL ACTUALIZADA) */}
 <section id="contacto" style={{ 
   maxWidth: '1100px', 
   margin: '80px auto', 
@@ -114,14 +115,15 @@ export default function Home() {
   gap: '40px',
   justifyContent: 'center'
 }}>
-  {/* BLOQUE IZQUIERDO: TEXTO */}
+  {/* BLOQUE IZQUIERDO: CUADRO DE TEXTO */}
   <div style={{ 
     flex: '1', 
     minWidth: '300px', 
-    border: '2px solid #FFFFFF', 
+    border: '1px solid rgba(26, 26, 26, 0.1)', 
     padding: '40px', 
-    borderRadius: '15px',
-    backgroundColor: 'rgba(255, 255, 255, 0.2)' 
+    borderRadius: '20px',
+    backgroundColor: '#ECE1ED', // El lila del menú para dar coherencia
+    boxShadow: '0 10px 30px rgba(0,0,0,0.05)'
   }}>
     <h2 style={{ 
       fontSize: '2rem', 
@@ -129,28 +131,46 @@ export default function Home() {
       marginBottom: '20px',
       color: '#1A1A1A' 
     }}>Contacto</h2>
-    <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#1A1A1A' }}>
+    <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#1A1A1A', letterSpacing: '0.5px' }}>
       ¿Interesado en comenzar un nuevo proceso conmigo?<br/>
-      Puedes contactarme a través de mis redes sociales o enviarme un email a:
+      Puedes encontrarme en mis redes sociales o escribirme directamente a:
       <br/><br/>
-      <strong style={{ fontSize: '1.2rem' }}>mmenacho@movistar.es</strong>
+      <a href="mailto:maykamenacholopez@gmail.com" style={{ 
+        fontSize: '1.1rem', 
+        fontWeight: '600', 
+        color: '#1A1A1A',
+        textDecoration: 'underline',
+        textUnderlineOffset: '4px'
+      }}>
+        maykamenacholopez@gmail.com
+      </a>
     </p>
   </div>
 
-  {/* BLOQUE CENTRAL: ICONOS SOCIALES */}
+  {/* BLOQUE CENTRAL: ICONOS REDES SOCIALES */}
   <div style={{ 
     display: 'flex', 
     flexDirection: 'column', 
-    gap: '20px',
-    alignItems: 'center' 
+    gap: '25px',
+    alignItems: 'center',
+    padding: '0 20px'
   }}>
-    <a href="https://instagram.com/tu_usuario" target="_blank" rel="noreferrer">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style={{ width: '40px' }} />
+    {/* Instagram */}
+    <a href="AQUÍ_TU_ENLACE" target="_blank" rel="noreferrer" style={{ transition: 'transform 0.3s' }}>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style={{ width: '32px' }} />
     </a>
+    {/* TikTok */}
+    <a href="AQUÍ_TU_ENLACE" target="_blank" rel="noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" style={{ width: '32px' }} />
+    </a>
+    {/* YouTube */}
+    <a href="AQUÍ_TU_ENLACE" target="_blank" rel="noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" style={{ width: '35px' }} />
+    </a>
+    {/* WhatsApp */}
     <a href="https://wa.me/34644267361" target="_blank" rel="noreferrer">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style={{ width: '40px' }} />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style={{ width: '32px' }} />
     </a>
-    {/* Puedes añadir más iconos aquí como el de LinkedIn o Twitter si los usas */}
   </div>
 
   {/* BLOQUE DERECHO: FOTO */}
@@ -160,9 +180,10 @@ export default function Home() {
       alt="Mayka Menacho" 
       style={{ 
         width: '100%', 
-        maxWidth: '400px', 
-        borderRadius: '20px', 
-        boxShadow: '0 10px 30px rgba(0,0,0,0.1)' 
+        maxWidth: '380px', 
+        borderRadius: '15px', 
+        filter: 'grayscale(20%)',
+        boxShadow: '0 15px 35px rgba(0,0,0,0.1)' 
       }} 
     />
   </div>
