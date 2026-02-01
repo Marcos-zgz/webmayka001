@@ -57,11 +57,23 @@ export default function QuienSoy() {
           </div>
         </div>
 
-        {/* BOTÓN PARA VOLVER O IR A CONTACTO */}
+        {/* BOTÓN ESTILO SERVICIOS */}
         <div style={{ textAlign: 'center', marginTop: '50px' }}>
-          <a href="#contacto" style={{ backgroundColor: '#1A1A1A', color: '#FFFFFF', padding: '15px 40px', borderRadius: '50px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.9rem', letterSpacing: '1px' }}>
+          <Link href="/#contacto" style={{ 
+            backgroundColor: '#BDE0FE', // El azul de tus botones de servicios
+            color: '#1A1A1A', 
+            padding: '12px 35px', 
+            borderRadius: '50px', 
+            textDecoration: 'none', 
+            fontSize: '0.8rem', 
+            fontWeight: '700',
+            letterSpacing: '1px',
+            display: 'inline-block',
+            boxShadow: '0 4px 15px rgba(0,0,0,0.05)',
+            textTransform: 'uppercase'
+          }}>
             TRABAJEMOS JUNTOS
-          </a>
+          </Link>
         </div>
       </main>
 
