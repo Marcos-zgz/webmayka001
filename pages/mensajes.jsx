@@ -86,7 +86,7 @@ export default function MensajesMasAlla() {
           <p style={{ marginBottom: '30px', fontStyle: 'italic' }}>acelera el momento de cambio en tu vida.</p>
           
           <a 
-            href="https://wa.me/34644267361?text=Hola%20Mayka,%20me%20gustaría%20pedir%20cita%20para%20una%20sesión%20de%20Canalización" 
+            href="https://wa.me/+34644267361?text=Hola%20Mayka,%20me%20gustaría%20pedir%20cita%20para%20una%20sesión%20de%20Canalización" 
             target="_blank" 
             rel="noopener noreferrer"
             style={{ 
