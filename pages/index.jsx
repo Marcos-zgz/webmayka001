@@ -106,6 +106,7 @@ export default function Home() {
 </section>
 {/* SECCIÓN CONTACTO (ESTRUCTURA ORIGINAL ACTUALIZADA) */}
 <section id="contacto" style={{ 
+  scrollMarginTop: '100px', // <--- Esto deja aire para que el Nav no lo tape
   maxWidth: '1100px', 
   margin: '80px auto', 
   padding: '60px 20px',
