@@ -1,13 +1,10 @@
-import Image from "next/image";
-import Head from "next/head";
+import React from 'react';
 
 export default function Home() {
   return (
-    <div style={{ backgroundColor: '#F5E1D7', minHeight: '100vh', color: '#1A1A1A', margin: 0, padding: 0 }}>
-      <Head>
-        <title>Mayka Menacho</title>
-      </Head>
-
+    <div style={{ backgroundColor: '#F5E1D7', minHeight: '100vh', color: '#1A1A1A', margin: 0, padding: 0, fontFamily: 'sans-serif' }}>
+      
+      {/* MENU SUPERIOR */}
       <nav style={{ padding: '20px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>MM</div>
         <div style={{ display: 'flex', gap: '20px' }}>
@@ -16,13 +13,16 @@ export default function Home() {
         </div>
       </nav>
       
+      {/* CUERPO PRINCIPAL */}
       <main style={{ maxWidth: '1100px', margin: '0 auto', padding: '40px 20px' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '40px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '40px', justifyContent: 'center' }}>
           
+          {/* TEXTO */}
           <div style={{ flex: '1', minWidth: '300px' }}>
-            <p style={{ fontSize: '1.8rem', lineHeight: '1.4', fontWeight: '300', marginBottom: '40px' }}>
-              &iquest;Buscas claridad en tu vida? <br/>
-              Une tu intuici&oacute;n y estrategia para alcanzar tu prop&oacute;sito.
+            <h1 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Mayka Menacho</h1>
+            <p style={{ fontSize: '1.5rem', lineHeight: '1.4', fontWeight: '300', marginBottom: '40px' }}>
+              ¿Buscas claridad en tu vida? <br/>
+              Une tu intuición y estrategia para alcanzar tu propósito.
             </p>
 
             <a 
@@ -34,27 +34,24 @@ export default function Home() {
                 alignItems: 'center', 
                 gap: '12px', 
                 textDecoration: 'none',
-                backgroundColor: '#FFFFFF',
+                backgroundColor: '#25D366',
+                color: 'white',
                 padding: '12px 25px',
                 borderRadius: '50px',
-                boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                fontWeight: 'bold'
               }}
             >
-              <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-                alt="WhatsApp" 
-                style={{ width: '25px', height: '25px' }}
-              />
-              <span style={{ color: '#1A1A1A', fontWeight: '600' }}>Contactar por WhatsApp</span>
+              <span>WhatsApp</span>
             </a>
           </div>
 
+          {/* FOTO */}
           <div style={{ flex: '1', minWidth: '300px', display: 'flex', justifyContent: 'center' }}>
-             <img 
-                src="/images/projects-img/big-unsplash-party.png" 
-                alt="Mayka Menacho"
-                style={{ width: '100%', maxWidth: '400px', borderRadius: '20px', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}
-             />
+            <img 
+              src="/images/projects-img/big-unsplash-party.png" 
+              alt="Mayka Menacho"
+              style={{ width: '100%', maxWidth: '400px', borderRadius: '20px', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}
+            />
           </div>
 
         </div>
