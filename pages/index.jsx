@@ -103,35 +103,37 @@ export default function Home() {
   gap: '40px', 
   justifyContent: 'center' 
 }}>
-  {/* BLOQUE IZQUIERDO: EL CUADRO QUE AHORA SÍ SERÁ AZUL */}
-  <div style={{ 
-    flex: '1', 
-    minWidth: '300px', 
-    padding: '40px', 
-    borderRadius: '20px', 
-    border: '2px solid #FFFFFF', // Borde blanco como en testimonios
-    backgroundColor: '#EBF8FF',  // COLOR AZUL CIELO
-    boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
-    display: 'block' // Aseguramos que se comporte como un bloque sólido
-  }}>
-    <h2 style={{ 
-      fontSize: '2rem', 
-      fontWeight: 'bold', // Negrita solicitada
-      marginBottom: '20px', 
-      color: '#1A1A1A' 
-    }}>Contacto</h2>
-    <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#1A1A1A' }}>
-      ¿Interesado en comenzar un nuevo proceso conmigo?<br/>
-      Escríbeme directamente a:<br/><br/>
-      <a href="mailto:maykamenacholopez@gmail.com" style={{ 
-        fontWeight: '600', 
-        color: '#1A1A1A',
-        textDecoration: 'underline'
-      }}>
-        maykamenacholopez@gmail.com
-      </a>
-    </p>
-  </div>
+  {/* BLOQUE IZQUIERDO: CUADRO DE TEXTO AZUL (FORZADO) */}
+<div style={{ 
+  flex: '1', 
+  minWidth: '300px', 
+  padding: '40px', 
+  borderRadius: '20px', 
+  border: '2px solid #FFFFFF', 
+  backgroundColor: 'transparent', // Engañamos al CSS externo
+  /* Esta sombra rellena el cuadro de azul por dentro, saltándose las reglas externas */
+  boxShadow: 'inset 0 0 0 1000px #EBF8FF, 0 10px 30px rgba(0,0,0,0.05)',
+  position: 'relative',
+  zIndex: 1
+}}>
+  <h2 style={{ 
+    fontSize: '2rem', 
+    fontWeight: 'bold', 
+    marginBottom: '20px', 
+    color: '#1A1A1A' 
+  }}>Contacto</h2>
+  <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#1A1A1A' }}>
+    ¿Interesado en comenzar un nuevo proceso conmigo?<br/>
+    Escríbeme directamente a:<br/><br/>
+    <a href="mailto:maykamenacholopez@gmail.com" style={{ 
+      fontWeight: '600', 
+      color: '#1A1A1A',
+      textDecoration: 'underline'
+    }}>
+      maykamenacholopez@gmail.com
+    </a>
+  </p>
+</div>
 
   {/* BLOQUE CENTRAL: ICONOS */}
   <div style={{ display: 'flex', flexDirection: 'column', gap: '25px', alignItems: 'center' }}>
