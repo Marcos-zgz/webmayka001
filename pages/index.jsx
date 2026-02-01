@@ -68,22 +68,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECCIÓN TESTIMONIOS (TARJETAS AZULES) */}
+    {/* SECCIÓN TESTIMONIOS (TARJETAS AZUL CIELO) */}
       <section id="testimonios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '100px 20px' }}>
         <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>TESTIMONIOS</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '25px' }}>
           {testimonios.map((t, i) => (
             <div key={i} style={{ 
-              padding: '30px', 
-              backgroundColor: 'rgba(189, 224, 254, 0.35)', // Azul suave flotante
+              padding: '35px 30px', 
+              backgroundColor: '#D0E9FF', // Azul cielo sólido para que SÍ se vea el color
               borderRadius: '8px', 
-              boxShadow: '0 10px 20px rgba(0,0,0,0.03)',
+              boxShadow: '0 10px 25px rgba(0,0,0,0.06)', // Sombra un poco más marcada para el efecto flotante
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              border: '1px solid rgba(255,255,255,0.5)' // Un brillo sutil en el borde
             }}>
-              <p style={{ fontSize: '1rem', fontStyle: 'italic', lineHeight: '1.6', marginBottom: '20px', color: '#333' }}>"{t.t}"</p>
-              <p style={{ fontSize: '0.9rem', fontWeight: '700', color: '#1A1A1A' }}>- {t.n}</p>
+              <p style={{ fontSize: '1rem', fontStyle: 'italic', lineHeight: '1.7', marginBottom: '25px', color: '#2C3E50' }}>
+                "{t.t}"
+              </p>
+              <p style={{ fontSize: '0.9rem', fontWeight: '700', color: '#1A1A1A', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                - {t.n}
+              </p>
             </div>
           ))}
         </div>
