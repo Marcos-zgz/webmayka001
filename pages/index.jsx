@@ -18,37 +18,35 @@ export default function Home() {
               Une tu intuición y estrategia para alcanzar tu propósito.
             </p>
 
-       {/* SECCIÓN WHATSAPP CON ICONO */}
-<div style={{ marginTop: '30px' }}>
+{/* SECCIÓN WHATSAPP DIRECTA */}
+<div style={{ marginTop: '40px', display: 'flex', justifyContent: 'center', md: { justifyContent: 'flex-start' } }}>
   <a 
-    href="https://wa.me/+34644267361" // Pon aquí el número de Mayka
+    href="https://wa.me/+34644267361" 
     target="_blank"
     rel="noopener noreferrer"
     style={{ 
-      display: 'inline-flex', 
+      display: 'flex', 
       alignItems: 'center', 
-      gap: '12px', 
+      gap: '15px', 
       textDecoration: 'none',
-      transition: 'transform 0.2s ease'
+      backgroundColor: 'rgba(255,255,255,0.3)', // Un fondo muy suave para resaltar
+      padding: '10px 20px',
+      borderRadius: '15px'
     }}
-    onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-    onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
   >
-    {/* ICONO DE WHATSAPP */}
+    {/* Icono de WhatsApp desde una fuente muy fiable */}
     <img 
-      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+      src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
       alt="WhatsApp" 
-      style={{ width: '40px', height: '40px' }}
+      style={{ width: '35px', height: '35px', display: 'block' }}
     />
     
-    {/* TEXTO AL LADO */}
     <span style={{ 
       color: '#1A1A1A', 
       fontSize: '1.2rem', 
-      fontWeight: '500',
-      borderBottom: '1px solid #1A1A1A' // Una sutil línea debajo para que se sepa que es un link
+      fontWeight: '600',
     }}>
-      Contactar por WhatsApp
+      WhatsApp
     </span>
   </a>
 </div>
