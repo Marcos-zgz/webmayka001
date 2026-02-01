@@ -89,7 +89,7 @@ export default function Home() {
         border: '2px solid #FFFFFF', // Tu reborde blanco
         backgroundColor: 'transparent', // Cumplimos con la regla externa...
         /* ¡PERO añadimos el azul mediante una sombra interna! */
-        boxShadow: 'inset 0 0 0 1000px #BDE0FE, 0 15px 35px rgba(0,0,0,0.1)', 
+        boxShadow: 'inset 0 0 0 1000px #E3F2FD, 0 15px 35px rgba(0,0,0,0.1)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center'
