@@ -1,41 +1,95 @@
-import React, { useState } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+
+import { Norican } from "@next/font/google";
+import { useState } from "react";
+const norican = Norican({
+  weight: "400",
+  subsets: ["latin"],
+  fallback: ["brush script m7"],
+});
+
+import { Inter } from "@next/font/google";
+const inter = Inter({ subsets: ["latin"], fallback: ["arial"] });
 
 export default function Nav({ logo }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const paginas = ["Quién soy", "Entrevistas", "Talk to Mayka", "Consultoría Organizacional", "Mensajes del Más Allá", "Canalización a Distancia", "Regresiones", "Análisis de Sueños", "Talleres en Grupo", "Terapia del Duelo", "Contacto"];
-
+  const [navOpen, setNavOpen] = useState(false);
+  const handleNavOpen = () => {
+    setNavOpen(!navOpen);
+    
+  };
   return (
-    <>
-      <nav style={{ 
-        position: 'fixed', top: 0, left: 0, width: '100%', height: '80px',
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center', 
-        padding: '0 40px', backgroundColor: 'rgba(245, 225, 215, 0.98)',
-        zIndex: 100000, boxSizing: 'border-box'
-      }}>
-        <div style={{ fontSize: '1.2rem', fontWeight: 'bold', letterSpacing: '2px' }}>{logo}</div>
-        
-        {/* ICONO MODERNO 2 LÍNEAS */}
-        <div onClick={() => setIsOpen(!isOpen)} style={{ cursor: 'pointer', zIndex: 100001, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px', padding: '10px' }}>
-          <div style={{ width: isOpen ? '30px' : '32px', height: '1.5px', backgroundColor: '#1A1A1A', transition: '0.4s', transform: isOpen ? 'rotate(45deg) translate(7px, 7px)' : '' }}></div>
-          <div style={{ width: isOpen ? '30px' : '20px', height: '1.5px', backgroundColor: '#1A1A1A', transition: '0.4s', transform: isOpen ? 'rotate(-45deg) translate(0px, 0px)' : '' }}></div>
+    <div className="flex justify-between lg:bg-gradient-to-r from-[#080344]/50 via-[#0E0946]/50 to-[#080344]/50 lg:backdrop-blur-md lg:border-b-[0.025rem] lg:border-b-neutral-200/5 lg:fixed lg:min-w-full lg:top-0 ">
+      <div className="ml-6 mt-4 lg:mt-8">
+        <div className={norican.className}>
+          <h1 className="bg-gradient-to-r from-aqua to-lavender inline-block text-transparent bg-clip-text pb-4">
+            <Link href="/">{logo}</Link>
+          </h1>
         </div>
-      </nav>
-
-      <div style={{
-        position: 'fixed', top: 0, right: 0, width: '320px', height: '100vh', 
-        backgroundColor: '#ECE1ED', boxShadow: '-10px 0 50px rgba(0,0,0,0.2)',
-        transition: 'transform 0.5s cubic-bezier(0.77, 0, 0.175, 1)',
-        transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
-        display: 'flex', flexDirection: 'column', padding: '120px 40px', boxSizing: 'border-box',
-        zIndex: 99999, overflowY: 'auto'
-      }}>
-        {paginas.map((p, i) => (
-          <a key={i} href="#" style={{ textDecoration: 'none', color: '#1A1A1A', fontSize: '0.75rem', marginBottom: '25px', fontWeight: '400', letterSpacing: '2px', textTransform: 'uppercase' }}>{p}</a>
-        ))}
+      </div>
+      <div onClick={handleNavOpen} className=" fixed right-0 mr-6 mt-4">
+        <button>
+          <Image
+            className="lg:hidden"
+            src="/assets/Menu-Icon.svg"
+            height={60}
+            width={60}
+            alt="menu icon"
+          />
+        </button>
       </div>
 
-      {isOpen && <div onClick={() => setIsOpen(false)} style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'rgba(0,0,0,0.3)', zIndex: 99998, backdropFilter: 'blur(3px)' }}></div>}
-    </>
+      {/* mobile nav */}
+      <div onClick={handleNavOpen} className={norican.className}>
+        <nav
+          className={
+            navOpen
+              ? " bg-gradient-to-r from-[#080344]/50 via-[#0E0946]/50 to-[#080344]/50 backdrop-blur-md border-l-[0.025rem] border-l-neutral-200/5 min-h-screen fixed right-0  min-w-[50%] grid grid-flow-row justify-items-center content-start gap-y-10  lg:hidden"
+              : "hidden"
+          }
+        >
+          <div
+            onClick={handleNavOpen}
+            className="justify-self-end mr-6 mt-4 text-3xl md:text-4xl hover:text-sky-400"
+          >
+            <button className={inter.className}>X</button>
+          </div>
+          <ul className="grid grid-flow-row justify-items-center text-3xl md:text-5xl gap-y-8 md:gap-y-10">
+            <li className="justify-self-start hover:underline underline-offset-8 decoration-2  decoration-neutral-200/90 ">
+              <Link href="/">Home</Link>
+            </li>
+            <li className="hover:underline underline-offset-8 decoration-2  decoration-neutral-200/90">
+              <Link href="#my-projects">Projects</Link>
+            </li>
+            <li className=" hover:underline underline-offset-8 decoration-2  decoration-neutral-200/90">
+              <Link href="#contact-me">Contact</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      {/* desktop nav */}
+      <div className={norican.className}>
+        <nav className="hidden lg:grid">
+          <ul
+            className="
+          grid grid-flow-col justify-items-center  text-4xl gap-x-16 items-center mr-10 mt-8"
+          >
+            <li
+              className="
+            hover:underline underline-offset-8 decoration-2 decoration-neutral-200/90"
+            >
+              <Link href="#my-projects">Projects</Link>
+            </li>
+            <li
+              className="
+            hover:underline underline-offset-8 decoration-2 decoration-neutral-200/90"
+            >
+              <Link href="#contact-me">Contact</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   );
 }
