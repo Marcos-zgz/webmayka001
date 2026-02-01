@@ -24,7 +24,7 @@ export default function Home() {
   ];
 
   return (
-    <div style={{ backgroundColor: '#F5E1D7', minHeight: '100vh', color: '#1A1A1A', margin: 0, padding: 0, fontFamily: 'sans-serif', scrollBehavior: 'smooth' }}>
+    <div style={{ backgroundColor: '#FFF0EB', minHeight: '100vh', color: '#1A1A1A', margin: 0, padding: 0, fontFamily: 'sans-serif', scrollBehavior: 'smooth' }}>
       <Head>
         <title>Mayka Menacho</title>
       </Head>
@@ -32,23 +32,39 @@ export default function Home() {
       <Nav logo="MM" />
       
       {/* SECCIÓN HERO (BIENVENIDA) */}
-      <main style={{ maxWidth: '1100px', margin: '0 auto', paddingTop: '120px', paddingLeft: '20px', paddingRight: '20px', paddingBottom: '80px' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '40px', justifyContent: 'center' }}>
-          <div style={{ flex: '1', minWidth: '300px' }}>
-            <p style={{ fontSize: '1.4rem', lineHeight: '1.5', fontWeight: '300', marginBottom: '30px', color: '#333' }}>
-              &iquest;Buscas claridad en tu vida? <br/>
-              Une tu intuici&oacute;n y estrategia para alcanzar tu prop&oacute;sito.
-            </p>
-            <a href="https://wa.me/+34644267361" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', textDecoration: 'none', backgroundColor: '#FFFFFF', padding: '10px 20px', borderRadius: '50px', boxShadow: '0 4px 10px rgba(0,0,0,0.05)' }}>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style={{ width: '22px', height: '22px' }} />
-              <span style={{ color: '#1A1A1A', fontWeight: '600' }}>WhatsApp</span>
-            </a>
-          </div>
-          <div style={{ flex: '1', minWidth: '300px', display: 'flex', justifyContent: 'center' }}>
-            <img src="/images/projects-img/big-unsplash-party.png" alt="Mayka" style={{ width: '100%', maxWidth: '400px', borderRadius: '25px', boxShadow: '0 15px 30px rgba(0,0,0,0.1)' }} />
-          </div>
-        </div>
-      </main>
+    <main style={{ maxWidth: '1100px', margin: '0 auto', paddingTop: '100px', paddingLeft: '20px', paddingRight: '20px' }}>
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '40px' }}>
+    
+    {/* 1. EL LOGO (Grande y protagonista) */}
+    <div style={{ width: '100%', maxWidth: '300px' }}>
+      <Image 
+        src="/assets/logo-mayka.jpg" 
+        alt="Logo Mayka Menacho" 
+        width={300} 
+        height={300} 
+        priority
+        style={{ borderRadius: '50%' }}
+      />
+    </div>
+
+    {/* 2. EL TEXTO DE BIENVENIDA */}
+    <div style={{ maxWidth: '700px' }}>
+      <p style={{ fontSize: '1.4rem', lineHeight: '1.6', color: '#1A1A1A', fontFamily: 'sans-serif' }}>
+        "Tu mensaje de bienvenida aquí, conectando con tu esencia y propósito..."
+      </p>
+    </div>
+
+    {/* 3. FOTO DE CARA DE MAYKA */}
+    <div style={{ width: '100%', maxWidth: '500px' }}>
+      <img 
+        src="/assets/mayka-cara.jpg" // Asegúrate de subir esta nueva foto con este nombre
+        alt="Mayka Menacho" 
+        style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}
+      />
+    </div>
+
+  </div>
+</main>
 
     {/* SECCIÓN SERVICIOS (CON REBORDE BLANCO) */}
 <section id="servicios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '60px 20px' }}>
