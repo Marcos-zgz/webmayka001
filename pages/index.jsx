@@ -37,7 +37,7 @@ export default function Home() {
           
           <div style={{ width: '100%', maxWidth: '300px' }}>
             <Image 
-              src="/assets/logo-mayka.jpg" 
+              src="/assets/logo-mayka.png" 
               alt="Logo Mayka Menacho" 
               width={300} 
               height={300} 
