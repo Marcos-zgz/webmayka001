@@ -112,6 +112,7 @@ export default function Home() {
           borderRadius: '20px', 
           backgroundColor: '#EBF8FF', // Azul suave a juego con testimonios
           boxShadow: '0 10px 30px rgba(0,0,0,0.05)' 
+          display: 'block' // Aseguramos que se comporte como un bloque sólido
         }}>
           <h2 style={{ 
             fontSize: '2rem', 
