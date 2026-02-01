@@ -78,31 +78,28 @@ export default function Home() {
   </div>
 </section>
 
-{/* SECCIÓN TESTIMONIOS (SOLUCIÓN AL BLOQUEO DEL INSPECTOR) */}
+{/* SECCIÓN TESTIMONIOS (INMUNE A REGLAS EXTERNAS) */}
 <section id="testimonios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '100px 20px' }}>
   <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>LO QUE DICEN DE M&Iacute;</h2>
   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
     {testimonios.map((t, i) => (
       <div key={i} style={{ 
-        padding: '2px', 
-        backgroundColor: '#FFFFFF', // El borde blanco exterior
-        borderRadius: '12px',
-        boxShadow: '0 15px 35px rgba(0,0,0,0.1)'
+        padding: '40px 30px', 
+        borderRadius: '12px', 
+        border: '2px solid #FFFFFF', // Tu reborde blanco
+        backgroundColor: 'transparent', // Cumplimos con la regla externa...
+        /* ¡PERO añadimos el azul mediante una sombra interna! */
+        boxShadow: 'inset 0 0 0 1000px #BDE0FE, 0 15px 35px rgba(0,0,0,0.1)', 
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center'
       }}>
-        {/* ESTE DIV INTERNO ES EL QUE LLEVARÁ EL AZUL SÍ O SÍ */}
-        <div style={{ 
-          backgroundColor: '#BDE0FE', 
-          padding: '40px 30px', 
-          borderRadius: '10px',
-          height: '100%'
-        }}>
-          <p style={{ fontSize: '1rem', fontStyle: 'italic', lineHeight: '1.7', marginBottom: '25px', color: '#1A1A1A' }}>
-            "{t.t}"
-          </p>
-          <p style={{ fontSize: '0.85rem', fontWeight: '800', color: '#1A1A1A', textTransform: 'uppercase' }}>
-            - {t.n}
-          </p>
-        </div>
+        <p style={{ fontSize: '1rem', fontStyle: 'italic', lineHeight: '1.7', marginBottom: '25px', color: '#1A1A1A' }}>
+          "{t.t}"
+        </p>
+        <p style={{ fontSize: '0.85rem', fontWeight: '800', color: '#1A1A1A', textTransform: 'uppercase' }}>
+          - {t.n}
+        </p>
       </div>
     ))}
   </div>
