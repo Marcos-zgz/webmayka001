@@ -104,18 +104,38 @@ export default function Home() {
     ))}
   </div>
 </section>
-<section id="contacto" style={{ maxWidth: '800px', margin: '0 auto', padding: '100px 20px', textAlign: 'center' }}>
-  <h2 style={{ fontSize: '1.2rem', fontWeight: '400', marginBottom: '30px', letterSpacing: '3px' }}>CONTACTO</h2>
-  <p style={{ fontSize: '1rem', lineHeight: '1.8', marginBottom: '40px', color: '#333' }}>
-    ¿Tienes alguna duda o quieres agendar una sesión? <br/>
-    Escríbeme y estaré encantada de acompañarte en tu proceso.
+{/* SECCIÓN CONTACTO ORIGINAL */}
+<section id="contacto" style={{ padding: '100px 20px', textAlign: 'center', backgroundColor: 'transparent' }}>
+  <h2 style={{ fontWeight: '300', fontSize: '1.8rem', letterSpacing: '4px', marginBottom: '20px' }}>HABLEMOS</h2>
+  
+  <p style={{ color: '#666', fontSize: '1.1rem', marginBottom: '40px' }}>
+    mmenacho@movistar.es
   </p>
-  <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-    <a href="mailto:hola@maykamenacho.com" style={{ border: '1px solid #1A1A1A', color: '#1A1A1A', padding: '12px 25px', borderRadius: '50px', textDecoration: 'none', fontSize: '0.8rem', fontWeight: '600', letterSpacing: '1px' }}>
-      EMAIL
-    </a>
-    <a href="https://wa.me/tu-numero-aqui" target="_blank" rel="noreferrer" style={{ backgroundColor: '#1A1A1A', color: '#FFF', padding: '12px 25px', borderRadius: '50px', textDecoration: 'none', fontSize: '0.8rem', fontWeight: '600', letterSpacing: '1px' }}>
-      WHATSAPP
+
+  {/* BOTÓN WHATSAPP CON EL TELÉFONO ACTUALIZADO */}
+  <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <a 
+      href="https://wa.me/34644267361" 
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ 
+        display: 'inline-flex', 
+        alignItems: 'center', 
+        gap: '12px', 
+        textDecoration: 'none',
+        backgroundColor: '#FFFFFF',
+        padding: '14px 30px',
+        borderRadius: '50px',
+        boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+        transition: 'transform 0.2s ease'
+      }}
+    >
+      <img 
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+        alt="WhatsApp" 
+        style={{ width: '28px', height: '28px' }}
+      />
+      <span style={{ color: '#1A1A1A', fontWeight: '700', fontSize: '1.1rem' }}>Contactar por WhatsApp</span>
     </a>
   </div>
 </section>
