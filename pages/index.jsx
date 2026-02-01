@@ -41,33 +41,61 @@ export default function Home() {
         </div>
       </main>
 
-      {/* SECCIÓN SERVICIOS (8 BLOQUES) */}
-      <section id="servicios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '60px 20px 100px' }}>
-        <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>SERVICIOS</h2>
-        
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '25px' }}>
-          {servicios.map((s, i) => (
-            <div key={i} style={{ padding: '35px 25px', backgroundColor: 'rgba(255,255,255,0.25)', borderRadius: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', textAlign: 'center' }}>
-              <div>
-                <h3 style={{ fontSize: '1.1rem', marginBottom: '15px', letterSpacing: '1px', height: '3rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{s.t}</h3>
-                <p style={{ fontSize: '0.95rem', lineHeight: '1.5', color: '#444', marginBottom: '25px' }}>{s.d}</p>
-              </div>
-              <a href={s.p} style={{ 
-                backgroundColor: '#BDE0FE', // El azulito claro de las fotos
-                color: '#1A1A1A', 
-                padding: '10px 0', 
-                borderRadius: '50px', 
-                textDecoration: 'none', 
-                fontSize: '0.85rem', 
-                fontWeight: '600',
-                transition: 'opacity 0.2s'
-              }}>
-                SABER M&Aacute;S
-              </a>
-            </div>
-          ))}
+    {/* SECCIÓN SERVICIOS (TARJETAS FLOTANTES) */}
+<section id="servicios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '60px 20px 100px' }}>
+  <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>SERVICIOS</h2>
+  
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '30px' }}>
+    {servicios.map((s, i) => (
+      <div key={i} style={{ 
+        padding: '30px 20px', 
+        backgroundColor: '#FFFFFF', // Blanco sólido para que la sombra destaque
+        borderRadius: '8px', // Bordes redonditos pero pequeños
+        display: 'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'space-between', 
+        textAlign: 'center',
+        boxShadow: '0 10px 20px rgba(0,0,0,0.05)', // Efecto flotante (sombra suave)
+        border: '1px solid rgba(0,0,0,0.02)' // Borde casi invisible
+      }}>
+        <div>
+          <h3 style={{ 
+            fontSize: '1rem', 
+            marginBottom: '15px', 
+            letterSpacing: '1px', 
+            fontWeight: 'bold', // Títulos en negrita
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center',
+            minHeight: '2.5rem'
+          }}>
+            {s.t}
+          </h3>
+          <p style={{ fontSize: '0.9rem', lineHeight: '1.5', color: '#666', marginBottom: '25px' }}>{s.d}</p>
         </div>
-      </section>
+
+        {/* BOTÓN AZUL TRANSPARENTE Y PEQUEÑO */}
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <a href={s.p} style={{ 
+            backgroundColor: 'rgba(189, 224, 254, 0.6)', // Azul con transparencia
+            color: '#1A1A1A', 
+            padding: '8px 20px', 
+            borderRadius: '50px', 
+            textDecoration: 'none', 
+            fontSize: '0.75rem', 
+            fontWeight: '700',
+            letterSpacing: '0.5px',
+            display: 'inline-block',
+            width: 'auto', // Se ajusta al texto
+            transition: 'background 0.3s'
+          }}>
+            SABER M&Aacute;S
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
 
       <footer id="contacto" style={{ padding: '60px 20px', textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
         &copy; 2026 Mayka Menacho
