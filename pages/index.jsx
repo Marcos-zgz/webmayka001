@@ -146,7 +146,7 @@ export default function Home() {
   {/* BLOQUE DERECHO: FOTO */}
   <div style={{ flex: '1', minWidth: '300px', display: 'flex', justifyContent: 'center' }}>
     <img 
-      src="/images/projects-img/big-unsplash-party.png" 
+      src="/images/mayka2.jpg" 
       alt="Mayka Menacho" 
       style={{ width: '100%', maxWidth: '380px', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} 
     />
