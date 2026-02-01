@@ -104,14 +104,41 @@ export default function Home() {
     ))}
   </div>
 </section>
- <section className="contact" id="contact-me">
-          <Contact
-            title="Contact"
-            firstPara="Interested in creating a new project with me?"
-            secondPara="You can contact me on any social media platform or send me an email at "
-            email="yourname@email.com"
-          />
-        </section>
+{/* SECCIÓN CONTACTO ORIGINAL */}
+<section id="contacto" style={{ padding: '100px 20px', textAlign: 'center', backgroundColor: 'transparent' }}>
+  <h2 style={{ fontWeight: '300', fontSize: '1.8rem', letterSpacing: '4px', marginBottom: '20px' }}>HABLEMOS</h2>
+  
+  <p style={{ color: '#666', fontSize: '1.1rem', marginBottom: '40px' }}>
+    mmenacho@movistar.es
+  </p>
+
+  {/* BOTÓN WHATSAPP CON EL TELÉFONO ACTUALIZADO */}
+  <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <a 
+      href="https://wa.me/34644267361" 
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ 
+        display: 'inline-flex', 
+        alignItems: 'center', 
+        gap: '12px', 
+        textDecoration: 'none',
+        backgroundColor: '#FFFFFF',
+        padding: '14px 30px',
+        borderRadius: '50px',
+        boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+        transition: 'transform 0.2s ease'
+      }}
+    >
+      <img 
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+        alt="WhatsApp" 
+        style={{ width: '28px', height: '28px' }}
+      />
+      <span style={{ color: '#1A1A1A', fontWeight: '700', fontSize: '1.1rem' }}>Contactar por WhatsApp</span>
+    </a>
+  </div>
+</section>
       <footer style={{ padding: '60px 20px', textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
         &copy; 2026 Mayka Menacho
       </footer>
