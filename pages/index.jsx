@@ -5,29 +5,34 @@ export default function Home() {
   return (
     <div style={{ backgroundColor: '#F5E1D7', minHeight: '100vh', color: '#1A1A1A', margin: 0, padding: 0, fontFamily: 'sans-serif' }}>
       <Head>
-        <title>Mayka Menacho | Intuición y Estrategia</title>
+        <title>Mayka Menacho</title>
       </Head>
 
-      {/* CABECERA PROFESIONAL */}
-      <nav style={{ padding: '25px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ fontSize: '1.4rem', fontWeight: '800', letterSpacing: '2px', color: '#1A1A1A' }}>MAYKA MENACHO</div>
-        <div style={{ display: 'flex', gap: '25px', fontWeight: '400', fontSize: '0.9rem', textTransform: 'uppercase' }}>
-          <a href="#servicios" style={{ textDecoration: 'none', color: '#1A1A1A' }}>Servicios</a>
-          <a href="#contacto" style={{ textDecoration: 'none', color: '#1A1A1A' }}>Contacto</a>
+      {/* CABECERA CON MENÚ DESPLEGABLE ESTILO "CHULO" */}
+      <nav style={{ padding: '20px 30px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ fontSize: '1.2rem', fontWeight: '800', letterSpacing: '2px' }}>MAYKA MENACHO</div>
+        
+        {/* Este es el icono de las tres rayitas (hamburguesa) */}
+        <div style={{ cursor: 'pointer' }}>
+          <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="30" height="2" fill="#1A1A1A"/>
+            <rect y="9" width="30" height="2" fill="#1A1A1A"/>
+            <rect y="18" width="20" height="2" fill="#1A1A1A"/>
+          </svg>
         </div>
       </nav>
       
-      <main style={{ maxWidth: '1100px', margin: '0 auto', padding: '60px 20px' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '60px', justifyContent: 'center' }}>
+      <main style={{ maxWidth: '1000px', margin: '0 auto', padding: '40px 20px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '40px', justifyContent: 'center' }}>
           
-          {/* LADO IZQUIERDO: MENSAJE POTENTE Y WHATSAPP */}
-          <div style={{ flex: '1', minWidth: '320px' }}>
-            <p style={{ fontSize: '2.2rem', lineHeight: '1.3', fontWeight: '300', marginBottom: '40px', color: '#1A1A1A' }}>
+          {/* LADO IZQUIERDO: TEXTO MÁS PEQUEÑO Y BOTÓN WHATSAPP */}
+          <div style={{ flex: '1', minWidth: '300px' }}>
+            <p style={{ fontSize: '1.4rem', lineHeight: '1.5', fontWeight: '300', marginBottom: '30px', color: '#333', maxWidth: '400px' }}>
               &iquest;Buscas claridad en tu vida? <br/>
-              <strong>Une tu intuici&oacute;n y estrategia</strong> para alcanzar tu prop&oacute;sito.
+              Une tu intuici&oacute;n y estrategia para alcanzar tu prop&oacute;sito.
             </p>
 
-            {/* BOTÓN WHATSAPP CON TU NÚMERO YA CONFIGURADO */}
+            {/* BOTÓN WHATSAPP SIMPLIFICADO */}
             <a 
               href="https://wa.me/34644267361" 
               target="_blank"
@@ -35,42 +40,34 @@ export default function Home() {
               style={{ 
                 display: 'inline-flex', 
                 alignItems: 'center', 
-                gap: '12px', 
+                gap: '10px', 
                 textDecoration: 'none',
                 backgroundColor: '#FFFFFF',
-                padding: '14px 30px',
+                padding: '10px 20px',
                 borderRadius: '50px',
-                boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
-                transition: 'transform 0.2s ease'
+                boxShadow: '0 4px 10px rgba(0,0,0,0.05)'
               }}
             >
               <img 
                 src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
                 alt="WhatsApp" 
-                style={{ width: '28px', height: '28px' }}
+                style={{ width: '24px', height: '24px' }}
               />
-              <span style={{ color: '#1A1A1A', fontWeight: '700', fontSize: '1.1rem' }}>Contactar por WhatsApp</span>
+              <span style={{ color: '#1A1A1A', fontWeight: '600', fontSize: '1rem' }}>WhatsApp</span>
             </a>
           </div>
 
           {/* LADO DERECHO: FOTO */}
-          <div style={{ flex: '1', minWidth: '320px', display: 'flex', justifyContent: 'center' }}>
-            <div style={{ position: 'relative' }}>
-              <img 
-                src="/images/projects-img/big-unsplash-party.png" 
-                alt="Mayka Menacho"
-                style={{ width: '100%', maxWidth: '420px', borderRadius: '30px', boxShadow: '0 20px 40px rgba(0,0,0,0.15)' }}
-              />
-            </div>
+          <div style={{ flex: '1', minWidth: '300px', display: 'flex', justifyContent: 'center' }}>
+            <img 
+              src="/images/projects-img/big-unsplash-party.png" 
+              alt="Mayka Menacho"
+              style={{ width: '100%', maxWidth: '380px', borderRadius: '25px', boxShadow: '0 15px 30px rgba(0,0,0,0.1)' }}
+            />
           </div>
 
         </div>
       </main>
-
-      {/* PIE DE PÁGINA */}
-      <footer id="contacto" style={{ padding: '60px 20px', textAlign: 'center', marginTop: '40px' }}>
-        <p style={{ opacity: 0.6, fontSize: '0.9rem' }}>&copy; 2026 Mayka Menacho. Todos los derechos reservados.</p>
-      </footer>
     </div>
   );
 }
