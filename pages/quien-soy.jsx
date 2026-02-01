@@ -17,7 +17,7 @@ export default function QuienSoy() {
         
         {/* TÍTULO PRINCIPAL */}
         <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '50px', letterSpacing: '2px' }}>
-          SOY MAYKA MENACHO
+          Te cuento sobre mi...
         </h1>
 
         {/* CONTENEDOR DE TEXTO CON EL TRUCO DEL AZUL */}
