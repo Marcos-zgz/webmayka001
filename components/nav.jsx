@@ -36,7 +36,7 @@ export default function Nav({ logo }) {
 <div className="ml-6 mt-2 lg:mt-4">
   <Link href="/">
     <Image 
-      src="/assets/perfil mayka.jpg" // Asegúrate de que la ruta sea correcta
+      src="/assets/logo-mayka.jpg" // Asegúrate de que la ruta sea correcta
       alt="Mayka Menacho Logo"
       width={120}  // Ajusta el tamaño según prefieras
       height={120}
