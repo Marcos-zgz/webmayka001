@@ -26,7 +26,7 @@ export default function Regresiones() {
           {/* FOTO DESPUÉS DEL PRIMER PÁRRAFO */}
           <div style={{ width: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', margin: '10px 0' }}>
             <img 
-              src="/assets/regresiones.jpg" 
+              src="/assets/regresiones.png" 
               alt="Sesión de Terapia Regresiva" 
               style={{ width: '100%', display: 'block' }} 
             />
