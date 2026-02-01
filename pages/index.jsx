@@ -68,31 +68,32 @@ export default function Home() {
         </div>
       </section>
 
-    {/* SECCIÓN TESTIMONIOS (TARJETAS AZUL CIELO) */}
-      <section id="testimonios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '100px 20px' }}>
-        <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>TESTIMONIOS</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '25px' }}>
-          {testimonios.map((t, i) => (
-            <div key={i} style={{ 
-              padding: '35px 30px', 
-              backgroundColor: '#A2D2FF', // Un azul más vibrante para asegurar que cambia
-              borderRadius: '8px', 
-              boxShadow: '0 10px 25px rgba(0,0,0,0.06)', // Sombra un poco más marcada para el efecto flotante
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              border: '1px solid rgba(255,255,255,0.5)' // Un brillo sutil en el borde
-            }}>
-              <p style={{ fontSize: '1rem', fontStyle: 'italic', lineHeight: '1.7', marginBottom: '25px', color: '#2C3E50' }}>
-                "{t.t}"
-              </p>
-              <p style={{ fontSize: '0.9rem', fontWeight: '600', color: '#1A1A1A', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                - {t.n}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+    {/* SECCIÓN TESTIMONIOS (AZUL SÓLIDO TOTAL) */}
+<section id="testimonios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '100px 20px' }}>
+  <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>LO QUE DICEN DE M&Iacute;</h2>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
+    {testimonios.map((t, i) => (
+      <div key={i} style={{ 
+        padding: '40px 30px', 
+        backgroundColor: '#BDE0FE', // Azul cielo sólido
+        backgroundImage: 'none', // Quitamos cualquier posible degradado heredado
+        borderRadius: '8px', 
+        boxShadow: '0 15px 35px rgba(0,0,0,0.1)', 
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        border: '2px solid #FFFFFF' // Borde blanco para separar del fondo rosa
+      }}>
+        <p style={{ fontSize: '1rem', fontStyle: 'italic', lineHeight: '1.7', marginBottom: '25px', color: '#1A1A1A' }}>
+          "{t.t}"
+        </p>
+        <p style={{ fontSize: '0.85rem', fontWeight: '800', color: '#1A1A1A', textTransform: 'uppercase' }}>
+          - {t.n}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
 
       <footer style={{ padding: '60px 20px', textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
         &copy; 2026 Mayka Menacho
