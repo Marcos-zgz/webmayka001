@@ -25,7 +25,7 @@ export default function Home() {
   ];
 
   return (
-    <div style={{ backgroundColor: '#FFF0EB', minHeight: '100vh', color: '#1A1A1A', margin: 0, padding: 0, fontFamily: 'sans-serif', scrollBehavior: 'smooth' }}>
+    <div style={{ backgroundColor: '#F7E9E3', minHeight: '100vh', color: '#1A1A1A', margin: 0, padding: 0, fontFamily: 'sans-serif', scrollBehavior: 'smooth' }}>
       <Head>
         <title>Mayka Menacho</title>
       </Head>
