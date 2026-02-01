@@ -32,19 +32,21 @@ export default function Nav({ logo }) {
   ];
 
   return (
-  {/* LUGAR DEL LOGO */}
-<div className="ml-6 mt-2 lg:mt-4">
-  <Link href="/">
-    <Image 
-      src="/assets/logo-mayka.jpg" // Asegúrate de que la ruta sea correcta
-      alt="Mayka Menacho Logo"
-      width={120}  // Ajusta el tamaño según prefieras
-      height={120}
-      className="hover:scale-105 transition-transform duration-300"
-      style={{ borderRadius: '50%' }} // Por si acaso para asegurar el círculo
-    />
-  </Link>
-</div>
+<div className="flex justify-between bg-[#F5E1D7]/90 backdrop-blur-md border-b-[0.025rem] border-b-neutral-200/20 fixed min-w-full top-0 z-[100000]">
+      {/* LOGO */}
+      <div className="ml-6 mt-2 lg:mt-4">
+        <Link href="/">
+          <Image 
+            src="/assets/logo-mayka.jpg" 
+            alt="Mayka Menacho Logo"
+            width={100} 
+            height={100}
+            priority
+            className="hover:scale-105 transition-transform duration-300"
+            style={{ borderRadius: '50%' }}
+          />
+        </Link>
+      </div>
       
  <div onClick={handleNavOpen} className="fixed right-0 mr-6 mt-4 z-[100001] cursor-pointer">
   <button>
