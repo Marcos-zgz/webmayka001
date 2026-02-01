@@ -104,39 +104,67 @@ export default function Home() {
     ))}
   </div>
 </section>
-{/* SECCIÓN CONTACTO ORIGINAL */}
-<section id="contacto" style={{ padding: '100px 20px', textAlign: 'center', backgroundColor: 'transparent' }}>
-  <h2 style={{ fontWeight: '300', fontSize: '1.8rem', letterSpacing: '4px', marginBottom: '20px' }}>HABLEMOS</h2>
-  
-  <p style={{ color: '#666', fontSize: '1.1rem', marginBottom: '40px' }}>
-    mmenacho@movistar.es
-  </p>
+<section id="contacto" style={{ 
+  maxWidth: '1100px', 
+  margin: '80px auto', 
+  padding: '60px 20px',
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  gap: '40px',
+  justifyContent: 'center'
+}}>
+  {/* BLOQUE IZQUIERDO: TEXTO */}
+  <div style={{ 
+    flex: '1', 
+    minWidth: '300px', 
+    border: '2px solid #FFFFFF', 
+    padding: '40px', 
+    borderRadius: '15px',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)' 
+  }}>
+    <h2 style={{ 
+      fontSize: '2rem', 
+      fontFamily: 'Norican, cursive', 
+      marginBottom: '20px',
+      color: '#1A1A1A' 
+    }}>Contacto</h2>
+    <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#1A1A1A' }}>
+      ¿Interesado en comenzar un nuevo proceso conmigo?<br/>
+      Puedes contactarme a través de mis redes sociales o enviarme un email a:
+      <br/><br/>
+      <strong style={{ fontSize: '1.2rem' }}>mmenacho@movistar.es</strong>
+    </p>
+  </div>
 
-  {/* BOTÓN WHATSAPP CON EL TELÉFONO ACTUALIZADO */}
-  <div style={{ display: 'flex', justifyContent: 'center' }}>
-    <a 
-      href="https://wa.me/34644267361" 
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ 
-        display: 'inline-flex', 
-        alignItems: 'center', 
-        gap: '12px', 
-        textDecoration: 'none',
-        backgroundColor: '#FFFFFF',
-        padding: '14px 30px',
-        borderRadius: '50px',
-        boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
-        transition: 'transform 0.2s ease'
-      }}
-    >
-      <img 
-        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-        alt="WhatsApp" 
-        style={{ width: '28px', height: '28px' }}
-      />
-      <span style={{ color: '#1A1A1A', fontWeight: '700', fontSize: '1.1rem' }}>Contactar por WhatsApp</span>
+  {/* BLOQUE CENTRAL: ICONOS SOCIALES */}
+  <div style={{ 
+    display: 'flex', 
+    flexDirection: 'column', 
+    gap: '20px',
+    alignItems: 'center' 
+  }}>
+    <a href="https://instagram.com/tu_usuario" target="_blank" rel="noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style={{ width: '40px' }} />
     </a>
+    <a href="https://wa.me/34644267361" target="_blank" rel="noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style={{ width: '40px' }} />
+    </a>
+    {/* Puedes añadir más iconos aquí como el de LinkedIn o Twitter si los usas */}
+  </div>
+
+  {/* BLOQUE DERECHO: FOTO */}
+  <div style={{ flex: '1', minWidth: '300px', display: 'flex', justifyContent: 'center' }}>
+    <img 
+      src="/images/projects-img/big-unsplash-party.png" 
+      alt="Mayka Menacho" 
+      style={{ 
+        width: '100%', 
+        maxWidth: '400px', 
+        borderRadius: '20px', 
+        boxShadow: '0 10px 30px rgba(0,0,0,0.1)' 
+      }} 
+    />
   </div>
 </section>
       <footer style={{ padding: '60px 20px', textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
