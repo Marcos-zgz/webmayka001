@@ -70,7 +70,7 @@ export default function CanalizacionDistancia() {
           <h2 style={{ fontWeight: 'bold', marginBottom: '20px' }}>PIDE TU CITA PARA UNA SESIÓN</h2>
           
           <a 
-            href="https://wa.me/34644267361?text=Hola%20Mayka,%20me%20gustaría%20solicitar%20una%20Canalización%20a%20Distancia" 
+            href="https://wa.me/+34644267361?text=Hola%20Mayka,%20me%20gustaría%20solicitar%20una%20Canalización%20a%20Distancia" 
             target="_blank" 
             rel="noopener noreferrer"
             style={{ 
