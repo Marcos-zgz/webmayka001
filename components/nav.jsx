@@ -41,17 +41,17 @@ export default function Nav({ logo }) {
         </div>
       </div>
       
-      {/* BOTÓN HAMBURGUESA ORIGINAL */}
-      <div onClick={handleNavOpen} className="fixed right-0 mr-6 mt-4 z-[100001] cursor-pointer">
-        <button>
-          <Image
-            src="/assets/Menu-Icon.svg"
-            height={40} // Un poco más pequeño para elegancia
-            width={40}
-            alt="menu icon"
-          />
-        </button>
-      </div>
+    <div onClick={handleNavOpen} className="fixed right-0 mr-6 mt-4 lg:hidden"> 
+  {/* El "lg:hidden" hará que desaparezca en pantallas grandes */}
+  <button>
+    <Image
+      src="/assets/Menu-Icon.svg"
+      height={60}
+      width={60}
+      alt="menu icon"
+    />
+  </button>
+</div>
 
       {/* mobile nav - AHORA LILA */}
       <div className={inter.className}>
@@ -62,12 +62,7 @@ export default function Nav({ logo }) {
               : "hidden"
           }
         >
-          <div
-            onClick={handleNavOpen}
-            className="justify-self-end mr-6 mt-6 text-2xl hover:text-sky-400 cursor-pointer"
-          >
-          
-          </div>
+         
           <ul className="grid grid-flow-row justify-items-center text-sm gap-y-6 px-10 pt-10 uppercase tracking-widest">
             {menuItems.map((item, i) => (
               <li key={i} className="hover:opacity-50 transition-opacity">
