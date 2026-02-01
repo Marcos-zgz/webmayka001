@@ -80,7 +80,7 @@ export default function Home() {
 
 {/* SECCIÓN TESTIMONIOS (CON FORZADO DE COLOR AZUL) */}
 <section id="testimonios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '100px 20px' }}>
-  <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>LO QUE DICEN DE M&Iacute;</h2>
+  <h2 style={{ fontSize: '1.8rem', fontWeight: '300', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>Testimonios</h2>
   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
     {testimonios.map((t, i) => (
       <div key={i} style={{ 
