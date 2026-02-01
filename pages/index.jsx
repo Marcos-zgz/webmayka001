@@ -18,23 +18,36 @@ export default function Home() {
               Une tu intuición y estrategia para alcanzar tu propósito.
             </p>
 
-            {/* BOTÓN BLINDADO */}
-            <a 
-              href="https://wa.me/34600000000" 
-              target="_blank"
-              style={{ 
-                backgroundColor: '#1A1A1A', 
-                padding: '18px 40px', 
-                borderRadius: '50px', 
-                textDecoration: 'none', 
-                display: 'inline-block'
-              }}
-            >
-              <span style={{ color: '#FFFFFF', fontSize: '1.1rem', fontWeight: 'bold' }}>
-                Hablemos por WhatsApp
-              </span>
-            </a>
-          </div>
+          {/* BOTÓN CON TEXTO FORZADO */}
+<div style={{ marginTop: '30px' }}>
+  <a 
+    href="https://wa.me/+34644267361" 
+    target="_blank"
+    style={{ 
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#1A1A1A', 
+      padding: '15px 35px', 
+      borderRadius: '50px', 
+      textDecoration: 'none',
+      minWidth: '200px',
+      border: 'none',
+      boxShadow: '0 4px 10px rgba(0,0,0,0.2)'
+    }}
+  >
+    <strong style={{ 
+      color: '#FFFFFF !important', 
+      fontSize: '18px', 
+      fontWeight: 'bold',
+      textTransform: 'none',
+      letterSpacing: '0.5px',
+      WebkitTextFillColor: 'white' // Para navegadores que bloquean el color simple
+    }}>
+      Hablemos por WhatsApp
+    </strong>
+  </a>
+</div>
 
           {/* IMAGEN */}
           <div className="flex-1 flex justify-center">
