@@ -61,7 +61,7 @@ export default function Conversaciones() {
       {/* BOTÓN WHATSAPP DIRECTO */}
         <div style={{ textAlign: 'center', marginTop: '60px' }}>
           <a 
-            href="https://wa.me/34644267361?text=Hola%20Mayka,%20me%20gustaría%20reservar%20una%20sesión%20contigo" 
+            href="https://wa.me/+34644267361?text=Hola%20Mayka,%20me%20gustaría%20reservar%20una%20sesión%20contigo" 
             target="_blank" 
             rel="noopener noreferrer"
             style={{ 
