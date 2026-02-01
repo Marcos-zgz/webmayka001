@@ -41,13 +41,12 @@ export default function Nav({ logo }) {
         </div>
       </div>
       
-    <div onClick={handleNavOpen} className="fixed right-0 mr-6 mt-4 lg:hidden"> 
-  {/* El "lg:hidden" hará que desaparezca en pantallas grandes */}
+ <div onClick={handleNavOpen} className="fixed right-0 mr-6 mt-4 z-[100001] cursor-pointer">
   <button>
     <Image
       src="/assets/Menu-Icon.svg"
-      height={60}
-      width={60}
+      height={50} // Un poco más ajustado para que quede fino en ambos
+      width={50}
       alt="menu icon"
     />
   </button>
@@ -58,8 +57,8 @@ export default function Nav({ logo }) {
         <nav
           className={
             navOpen
-              ? "bg-[#ECE1ED] border-l-[0.025rem] border-l-neutral-200/5 min-h-screen fixed right-0 min-w-[300px] grid grid-flow-row justify-items-center content-start gap-y-6 z-[100000] shadow-2xl overflow-y-auto"
-              : "hidden"
+  ? "bg-[#ECE1ED] border-l-[0.025rem] border-l-neutral-200/5 min-h-screen fixed right-0 min-w-[320px] grid grid-flow-row justify-items-center content-start gap-y-10 z-[100000] shadow-xl"
+  : "hidden"
           }
         >
          
@@ -73,15 +72,7 @@ export default function Nav({ logo }) {
         </nav>
       </div>
 
-      {/* desktop nav - OCULTO SEGÚN ESTRUCTURA ORIGINAL */}
-      <div className={inter.className}>
-        <nav className="hidden lg:grid">
-          <ul className="grid grid-flow-col justify-items-center text-xs gap-x-10 items-center mr-10 mt-10 uppercase tracking-widest font-medium">
-            <li><Link href="/quien-soy">Quién soy</Link></li>
-            <li><Link href="#contacto">Contacto</Link></li>
-          </ul>
-        </nav>
-      </div>
+     
     </div>
   );
 }
