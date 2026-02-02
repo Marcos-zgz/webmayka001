@@ -26,7 +26,7 @@ export default function Nav({ logo }) {
     { n: "Canalización a Distancia", l: "/canalizacion" },
     { n: "Regresiones", l: "/regresiones" },
     { n: "Análisis de Sueños", l: "/suenos" },
-    { n: "Talleres en Grupo", l: "/talleres" },
+   
     { n: "Terapia del Duelo", l: "/duelo" },
     { n: "Contacto", l: "#contacto" },
   ];
