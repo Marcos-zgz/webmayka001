@@ -28,7 +28,7 @@ export default function AnalisisSuenos() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowFullScreen
             ></iframe> */}
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ml793vHHh-M?si=Dgn5uEeY7QSa5B8z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/ml793vHHh-M?si=Dgn5uEeY7QSa5B8z" title="Análisis de sueños" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>
 
