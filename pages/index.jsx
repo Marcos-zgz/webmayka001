@@ -8,7 +8,7 @@ export default function Home() {
     { t: "CONVERSACIONES CON MAYKA", d: "Sesiones de coaching personalizadas para desbloquear tu potencial.", p: "/talk-to-mayka" },
     { t: "CONSULTORÍA ORGANIZACIONAL", d: "Acompañamiento estratégico para empresas y equipos con alma.", p: "/consultoria" },
     { t: "MENSAJES DEL MÁS ALLÁ", d: "Conexión y guía en tu viaje personal a través de la intuición.", p: "/mensajes" },
-    { t: "CANALIZACIÓN A DISTANCIA", d: "Informe detallado o audio personalizado. Aportación: 65€.", p: "/canalizacion" },
+    { t: "CANALIZACIÓN A DISTANCIA", d: "Conecta con tus guías, seres queridos o tu esencia interior. Informe detallado o audio personalizado.", p: "/canalizacion" },
     { t: "REGISTROS AKÁSHICOS", d: "Viaje al pasado para sanar el presente y entender tu historia.", p: "/regresiones" },
     { t: "REGRESIONES", d: "Accede a la memoria universal de tu alma para obtener claridad, sanación y propósito.", p: "/registros" },
     { t: "ANÁLISIS DE SUEÑOS", d: "Descifra el lenguaje de tu subconsciente y sus mensajes ocultos.", p: "/suenos" },
@@ -139,9 +139,9 @@ export default function Home() {
   {/* BLOQUE CENTRAL: ICONOS */}
   <div style={{ display: 'flex', flexDirection: 'column', gap: '25px', alignItems: 'center' }}>
     <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style={{ width: '32px' }} /></a>
-    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" style={{ width: '32px' }} /></a>
-    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" style={{ width: '35px' }} /></a>
-    <a href="https://wa.me/34644267361"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style={{ width: '32px' }} /></a>
+    <a href="https://tiktok.com/conversacionesconmayka"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" style={{ width: '32px' }} /></a>
+    <a href="https://www.youtube.com/@maykamenacho"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" style={{ width: '35px' }} /></a>
+    <a href="https://wa.me/+34644267361"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style={{ width: '32px' }} /></a>
   </div>
 
   {/* BLOQUE DERECHO: FOTO */}
