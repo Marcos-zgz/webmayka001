@@ -48,7 +48,7 @@ export default function Home() {
 
           <div style={{ maxWidth: '700px' }}>
             <p style={{ fontSize: '1.4rem', lineHeight: '1.6', color: '#1A1A1A' }}>
-              "Tu mensaje de bienvenida aquí, conectando con tu esencia y propósito..."
+              "Libera tu esencia, sana tu historia y diseña el futuro que mereces: Cree, Crea y Crece"
             </p>
           </div>
 
