@@ -38,14 +38,7 @@ export default function AnalisisSuenos() {
             Los sueños son la puerta de entrada a nuestro inconsciente, un espacio donde la mente se libera de las restricciones lógicas y se comunica a través de símbolos y metáforas. El análisis de sueños no busca dar una interpretación universal, sino descifrar el mensaje único que tu alma tiene para ti.
           </p>
 
-          {/* FOTO DESPUÉS DEL PRIMER PÁRRAFO */}
-          <div style={{ width: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', margin: '10px 0' }}>
-            <img 
-              src="/assets/suenos.jpg" 
-              alt="Análisis de Sueños Mayka Menacho" 
-              style={{ width: '100%', display: 'block' }} 
-            />
-          </div>
+     
 
           {/* RECUADRO AZUL: EL PROPÓSITO */}
           <div style={{ 
@@ -87,7 +80,7 @@ export default function AnalisisSuenos() {
         {/* BOTÓN WHATSAPP */}
         <div style={{ marginTop: '60px', textAlign: 'center' }}>
           <p style={{ marginBottom: '20px' }}>Si tienes un sueño que te inquieta o quieres explorar este lenguaje, contacta conmigo.</p>
-          <a href="https://wa.me/34644267361?text=Hola%20Mayka,%20quiero%20información%20sobre%20el%20Análisis%20de%20Sueños" style={{ 
+          <a href="https://wa.me/+34644267361?text=Hola%20Mayka,%20quiero%20información%20sobre%20el%20Análisis%20de%20Sueños" style={{ 
             backgroundColor: '#25D366', color: '#FFFFFF', padding: '14px 35px', borderRadius: '50px', 
             textDecoration: 'none', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '10px' 
           }}>
