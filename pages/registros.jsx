@@ -20,35 +20,14 @@ export default function RegistrosAkashicos() {
           Tu Guía Evolutiva
         </p>
 
-        {/* VÍDEO DE YOUTUBE EMBEBIDO */}
-        <div style={{ width: '100%', marginBottom: '50px', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 15px 35px rgba(0,0,0,0.1)' }}>
-          <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-            <iframe 
-              src="https://www.youtube.com/embed/ePNTfoROQo0" 
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              title="Registros Akáshicos - Mayka Menacho"
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-
+     
         <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', lineHeight: '1.8', fontSize: '1.1rem', textAlign: 'left' }}>
           
           <p>
             Accede a la memoria universal de tu alma para obtener claridad, sanación y propósito. En este espacio, realizamos una lectura profunda del "Libro de la Vida" para comprender tu presente y potenciar tu futuro.
           </p>
 
-          {/* FOTO DESPUÉS DEL PRIMER PÁRRAFO */}
-          <div style={{ width: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', margin: '10px 0' }}>
-            <img 
-              src="/assets/registros.jpg" 
-              alt="Lectura de Registros Akáshicos" 
-              style={{ width: '100%', display: 'block' }} 
-            />
-          </div>
-
+         
           <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginTop: '10px' }}>¿Qué es una Consulta de Registros Akáshicos?</h2>
           <p>
             Es una herramienta de terapia transpersonal que permite conectar con una frecuencia elevada de información (el Akasha). El objetivo no es la adivinación, sino la <strong>comprensión evolutiva</strong>: entender para qué atraemos ciertas experiencias y cómo podemos liberar patrones que ya no nos sirven.
