@@ -17,20 +17,7 @@ export default function TerapiaDuelo() {
           Terapia del Duelo
         </h1>
 
-        {/* VÍDEO DE YOUTUBE EMBEBIDO */}
-        <div style={{ width: '100%', marginBottom: '50px', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 15px 35px rgba(0,0,0,0.1)' }}>
-          <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-            <iframe 
-              src="https://www.youtube.com/embed/ePNTfoROQo0" 
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              title="Terapia del Duelo - Mayka Menacho"
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-
+     
         <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', lineHeight: '1.8', fontSize: '1.1rem', textAlign: 'left' }}>
           
           <h2 style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>¿En qué consiste la terapia del duelo?</h2>
@@ -39,14 +26,7 @@ export default function TerapiaDuelo() {
             La terapia del duelo es un proceso terapéutico destinado a ayudar a las personas a hacer frente a la compleja experiencia de perder a un ser querido. Ya sea que se elija la modalidad <strong>individual o grupal</strong>, este enfoque brinda un espacio seguro y comprensivo para explorar las emociones intensas y desafiantes asociadas con la pérdida.
           </p>
 
-          {/* FOTO DESPUÉS DEL PRIMER BLOQUE */}
-          <div style={{ width: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', margin: '10px 0' }}>
-            <img 
-              src="/assets/duelo.jpg" 
-              alt="Acompañamiento en el duelo" 
-              style={{ width: '100%', display: 'block' }} 
-            />
-          </div>
+        
 
           <p>
             En <strong>sesiones individuales</strong>, adaptamos el tratamiento a tus necesidades específicas. Esto facilita la exploración de pensamientos, sentimientos y recuerdos de manera íntima, ayudándote a procesar la pérdida de una manera que sea significativa para ti.
