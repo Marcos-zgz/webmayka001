@@ -24,6 +24,7 @@ export default function Nav({ logo }) {
     { n: "Consultoría Organizacional", l: "/consultoria" },
     { n: "Mensajes del Más Allá", l: "/mensajes" },
     { n: "Canalización a Distancia", l: "/canalizacion" },
+    { n: "Registros Akáshicos", l: "/registros" },
     { n: "Regresiones", l: "/regresiones" },
     { n: "Análisis de Sueños", l: "/suenos" },
    
