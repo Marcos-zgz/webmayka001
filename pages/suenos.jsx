@@ -21,7 +21,7 @@ export default function AnalisisSuenos() {
         <div style={{ width: '100%', marginBottom: '50px', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 15px 35px rgba(0,0,0,0.1)' }}>
           <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
             <iframe 
-              src="https://youtu.be/ml793vHHh-M" 
+              src="https://www.youtube.com/watch?v=ml793vHHh-M&t=27s" 
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               title="Análisis de Sueños - Mayka Menacho"
               frameBorder="0" 
