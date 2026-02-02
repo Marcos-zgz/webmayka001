@@ -138,7 +138,7 @@ export default function Home() {
 
   {/* BLOQUE CENTRAL: ICONOS */}
   <div style={{ display: 'flex', flexDirection: 'column', gap: '25px', alignItems: 'center' }}>
-    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style={{ width: '32px' }} /></a>
+    <a href="https://www.instagram.com/talk_to_mayka/"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style={{ width: '32px' }} /></a>
     <a href="https://tiktok.com/conversacionesconmayka"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" style={{ width: '32px' }} /></a>
     <a href="https://www.youtube.com/@maykamenacho"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" style={{ width: '35px' }} /></a>
     <a href="https://wa.me/+34644267361"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style={{ width: '32px' }} /></a>
