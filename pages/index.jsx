@@ -30,37 +30,39 @@ export default function Home() {
       <Head>
         <title>Mayka Menacho</title>
       </Head>
-{/* CHAT PERSONALIZADO - MAYKA STYLE */}
+ {/* CHAT MAYKA - VERSIÓN FORZADA ANTICACHÉ */}
       <div dangerouslySetInnerHTML={{
         __html: `
           <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
           <div id="n8n-chat"></div>
           <script type="module">
-            import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+            // El ?v=${Date.now()} obliga a descargar el código nuevo siempre
+            import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js?v=${Date.now()}';
 
             createChat({
               webhookUrl: 'https://n8n-production-bc2e.up.railway.app/webhook/428e6420-d978-492e-accd-fe9037add400/chat',
               showWelcomeMessage: true,
-              welcomeMessage: 'Hola, soy Mayka. ¿En qué puedo ayudarte hoy?',
-              title: 'Mayka Menacho - Canalizadora y Coach Holistico',
+              welcomeMessage: 'Hola, soy Mayka. ¿En qué puedo acompañarte hoy?',
+              title: 'Mayka Menacho - Guía de Luz',
               mainColor: '#E6007E',
-              bubbleColor: '#BDE0FE',
-              bubbleAvatarUrl: '', // Puedes poner una URL de tu foto si quieres que salga en la burbuja
+              bubbleColor: '#E6007E',
               placeholder: 'Escribe tu mensaje aquí...',
-              // Ajustes para que resalte y la burbuja sea más grande
-              iFrameStyle: 'position: fixed; bottom: 30px; right: 30px; z-index: 9999; border: none; width: 400px; height: 600px;',
+              iFrameStyle: 'position: fixed; bottom: 20px; right: 20px; z-index: 9999; border: none; width: 400px; height: 600px;'
             });
-            
-            // Forzamos que la burbuja sea un poco más grande mediante CSS
+
+            // Forzamos el tamaño de la burbuja rosa
             const style = document.createElement('style');
+            style.id = 'mayka-chat-style';
             style.innerHTML = \`
               .n8n-chat-button { 
-                width: 70px !important; 
-                height: 70px !important; 
-                background-color: #BDE0FE !important;
-                box-shadow: 0 4px 15px rgba(230, 0, 126, 0.4) !important;
+                width: 75px !important; 
+                height: 75px !important; 
+                background-color: #E6007E !important;
+                box-shadow: 0 8px 25px rgba(230, 0, 126, 0.5) !important;
+                transition: transform 0.3s ease !important;
               }
-              .n8n-chat-button svg { width: 35px !important; height: 35px !important; }
+              .n8n-chat-button:hover { transform: scale(1.1); }
+              .n8n-chat-button svg { width: 38px !important; height: 38px !important; }
             \`;
             document.head.appendChild(style);
           </script>
