@@ -46,6 +46,8 @@ export default function Home() {
                   title: 'Mayka Menacho - Guía de Luz',
                   mainColor: '#E6007E',
                   bubbleColor: '#E6007E'
+                  // ESTO FUERZA A QUE SE VEA SIEMPRE ARRIBA
+  iFrameStyle: 'position: fixed; bottom: 20px; right: 20px; z-index: 999999;'
                 });
               } else {
                 setTimeout(initMaykaChat, 100);
