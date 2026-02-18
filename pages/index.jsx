@@ -39,32 +39,28 @@ export default function Home() {
             // El ?v=${Date.now()} obliga a descargar el código nuevo siempre
             import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js?v=${Date.now()}';
 
-            createChat({
+       createChat({
               webhookUrl: 'https://n8n-production-bc2e.up.railway.app/webhook/428e6420-d978-492e-accd-fe9037add400/chat',
               showWelcomeMessage: true,
               welcomeMessage: 'Hola, soy Mayka. ¿En qué puedo acompañarte hoy?',
               title: 'Mayka Menacho - Guía de Luz',
               mainColor: '#E6007E',
               bubbleColor: '#E6007E',
-              placeholder: 'Escribe tu mensaje aquí...',
-              iFrameStyle: 'position: fixed; bottom: 20px; right: 20px; z-index: 9999; border: none; width: 400px; height: 600px;'
+              iFrameStyle: 'position: fixed; bottom: 30px; right: 30px; z-index: 9999; border: none; width: 400px; height: 600px;',
             });
 
-            // Forzamos el tamaño de la burbuja rosa
-            const style = document.createElement('style');
-            style.id = 'mayka-chat-style';
-            style.innerHTML = \`
+            // ESTO ES LO QUE HARÁ QUE RESALTE SÍ O SÍ
+            const cssCustom = document.createElement('style');
+            cssCustom.innerHTML = `
               .n8n-chat-button { 
                 width: 75px !important; 
                 height: 75px !important; 
                 background-color: #E6007E !important;
-                box-shadow: 0 8px 25px rgba(230, 0, 126, 0.5) !important;
-                transition: transform 0.3s ease !important;
+                box-shadow: 0 10px 25px rgba(230, 0, 126, 0.5) !important;
               }
-              .n8n-chat-button:hover { transform: scale(1.1); }
-              .n8n-chat-button svg { width: 38px !important; height: 38px !important; }
-            \`;
-            document.head.appendChild(style);
+              .n8n-chat-button svg { width: 40px !important; height: 40px !important; }
+            `;
+            document.head.appendChild(cssCustom);
           </script>
         `
       }} />
