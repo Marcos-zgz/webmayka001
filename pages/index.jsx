@@ -1,7 +1,8 @@
-import React from 'react';
+ import React from 'react';
 import Head from 'next/head';
 import Nav from "../components/nav";
 import Image from "next/image";
+import Script from "next/script"; // Importamos el componente de Script
 
 export default function Home() {
   const servicios = [
@@ -12,7 +13,6 @@ export default function Home() {
     { t: "REGISTROS AKÁSHICOS", d: "Viaje al pasado para sanar el presente y entender tu historia.", p: "/regresiones" },
     { t: "REGRESIONES", d: "Accede a la memoria universal de tu alma para obtener claridad, sanación y propósito.", p: "/registros" },
     { t: "ANÁLISIS DE SUEÑOS", d: "Descifra el lenguaje de tu subconsciente y sus mensajes ocultos.", p: "/suenos" },
-   
     { t: "TERAPIA DEL DUELO", d: "Acompañamiento compasivo en procesos de pérdida y transición.", p: "/duelo" }
   ];
 
@@ -30,6 +30,25 @@ export default function Home() {
       <Head>
         <title>Mayka Menacho</title>
       </Head>
+
+      {/* --- CONFIGURACIÓN DEL CHAT DE N8N --- */}
+      <Script
+        src="https://scripts.n8n.io/chat.js"
+        strategy="afterInteractive"
+        onLoad={() => {
+          if (window.createChat) {
+            window.createChat({
+              webhookUrl: 'https://n8n-production-bc2e.up.railway.app/webhook/428e6420-d978-492e-accd-fe9037add400/chat',
+              webhookConfig: { method: 'POST' },
+              showWelcomeMessage: true,
+              welcomeMessage: 'Hola, soy Mayka. ¿En qué puedo acompañarte hoy?',
+              title: 'Mayka Menacho - Guía de Luz',
+              mainColor: '#E6007E',
+              bubbleColor: '#E6007E',
+            });
+          }
+        }}
+      />
 
       <Nav />
       
@@ -63,7 +82,7 @@ export default function Home() {
         </div>
       </main>
 
-   {/* SECCIÓN SERVICIOS */}
+      {/* SECCIÓN SERVICIOS */}
       <section id="servicios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '100px 20px' }}>
         <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', marginBottom: '50px', textAlign: 'center', letterSpacing: '2px' }}>SERVICIOS</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '30px' }}>
@@ -92,67 +111,59 @@ export default function Home() {
         </div>
       </section>
       
-   {/* SECCIÓN CONTACTO */}
-<section id="contacto" style={{ 
-  scrollMarginTop: '100px', 
-  maxWidth: '1100px', 
-  margin: '80px auto', 
-  padding: '60px 20px', 
-  display: 'flex', 
-  flexWrap: 'wrap', 
-  alignItems: 'center', 
-  gap: '40px', 
-  justifyContent: 'center' 
-}}>
-  {/* BLOQUE IZQUIERDO: CUADRO DE TEXTO AZUL (FORZADO) */}
-<div style={{ 
-  flex: '1', 
-  minWidth: '300px', 
-  padding: '40px', 
-  borderRadius: '20px', 
-  border: '2px solid #FFFFFF', 
-  backgroundColor: 'transparent', // Engañamos al CSS externo
-  /* Esta sombra rellena el cuadro de azul por dentro, saltándose las reglas externas */
-  boxShadow: 'inset 0 0 0 1000px #EBF8FF, 0 10px 30px rgba(0,0,0,0.05)',
-  position: 'relative',
-  zIndex: 1
-}}>
-  <h2 style={{ 
-    fontSize: '2rem', 
-    fontWeight: 'bold', 
-    marginBottom: '20px', 
-    color: '#1A1A1A' 
-  }}>Contacto</h2>
-  <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#1A1A1A' }}>
-    ¿Interesado en comenzar un nuevo proceso conmigo?<br/>
-    Escríbeme directamente a:<br/><br/>
-    <a href="mailto:maykamenacholopez@gmail.com" style={{ 
-      fontWeight: '600', 
-      color: '#1A1A1A',
-      textDecoration: 'underline'
-    }}>
-      maykamenacholopez@gmail.com
-    </a>
-  </p>
-</div>
+      {/* SECCIÓN CONTACTO */}
+      <section id="contacto" style={{ 
+        scrollMarginTop: '100px', 
+        maxWidth: '1100px', 
+        margin: '80px auto', 
+        padding: '60px 20px', 
+        display: 'flex', 
+        flexWrap: 'wrap', 
+        alignItems: 'center', 
+        gap: '40px', 
+        justifyContent: 'center' 
+      }}>
+        <div style={{ 
+          flex: '1', 
+          minWidth: '300px', 
+          padding: '40px', 
+          borderRadius: '20px', 
+          border: '2px solid #FFFFFF', 
+          backgroundColor: 'transparent',
+          boxShadow: 'inset 0 0 0 1000px #EBF8FF, 0 10px 30px rgba(0,0,0,0.05)',
+          position: 'relative',
+          zIndex: 1
+        }}>
+          <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '20px', color: '#1A1A1A' }}>Contacto</h2>
+          <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#1A1A1A' }}>
+            ¿Interesado en comenzar un nuevo proceso conmigo?<br/>
+            Escríbeme directamente a:<br/><br/>
+            <a href="mailto:maykamenacholopez@gmail.com" style={{ 
+              fontWeight: '600', 
+              color: '#1A1A1A',
+              textDecoration: 'underline'
+            }}>
+              maykamenacholopez@gmail.com
+            </a>
+          </p>
+        </div>
 
-  {/* BLOQUE CENTRAL: ICONOS */}
-  <div style={{ display: 'flex', flexDirection: 'column', gap: '25px', alignItems: 'center' }}>
-    <a href="https://www.instagram.com/talk_to_mayka/"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style={{ width: '32px' }} /></a>
-    <a href="https://tiktok.com/conversacionesconmayka"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" style={{ width: '32px' }} /></a>
-    <a href="https://www.youtube.com/@maykamenacho"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" style={{ width: '35px' }} /></a>
-    <a href="https://wa.me/+34644267361"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style={{ width: '32px' }} /></a>
-  </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '25px', alignItems: 'center' }}>
+          <a href="https://www.instagram.com/talk_to_mayka/"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style={{ width: '32px' }} /></a>
+          <a href="https://tiktok.com/conversacionesconmayka"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" style={{ width: '32px' }} /></a>
+          <a href="https://www.youtube.com/@maykamenacho"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" style={{ width: '35px' }} /></a>
+          <a href="https://wa.me/+34644267361"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style={{ width: '32px' }} /></a>
+        </div>
 
-  {/* BLOQUE DERECHO: FOTO */}
-  <div style={{ flex: '1', minWidth: '300px', display: 'flex', justifyContent: 'center' }}>
-    <img 
-      src="/images/mayka2.jpg" 
-      alt="Mayka Menacho" 
-      style={{ width: '100%', maxWidth: '380px', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} 
-    />
-  </div>
-</section>
+        <div style={{ flex: '1', minWidth: '300px', display: 'flex', justifyContent: 'center' }}>
+          <img 
+            src="/images/mayka2.jpg" 
+            alt="Mayka Menacho" 
+            style={{ width: '100%', maxWidth: '380px', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} 
+          />
+        </div>
+      </section>
+
       <footer style={{ padding: '60px 20px', textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
         &copy; 2026 Mayka Menacho
       </footer>
