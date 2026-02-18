@@ -30,7 +30,6 @@ export default function Home() {
       <Head>
         <title>Mayka Menacho</title>
       </Head>
-
 {/* INYECCIÓN DEL CHAT CORREGIDA */}
       <div dangerouslySetInnerHTML={{
         __html: `
