@@ -30,7 +30,7 @@ export default function Home() {
       <Head>
         <title>Mayka Menacho</title>
       </Head>
-{/* CHAT INTEGRADO SIN ERRORES */}
+{/* CHAT MAYKA - VERSIÓN FINAL SIN ERRORES */}
       <div dangerouslySetInnerHTML={{
         __html: `
           <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
@@ -51,6 +51,8 @@ export default function Home() {
               width: 70px !important; 
               height: 70px !important; 
               background-color: #E6007E !important;
+              bottom: 30px !important;
+              right: 30px !important;
             }
           </style>
         `
