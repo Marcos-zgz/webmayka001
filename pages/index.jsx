@@ -30,19 +30,10 @@ export default function Home() {
       <Head>
         <title>Mayka Menacho</title>
       </Head>
-{/* CHAT MAYKA - VERSIÓN CORREGIDA PARA VERCEL */}
+{/* CHAT INTEGRADO SIN ERRORES */}
       <div dangerouslySetInnerHTML={{
         __html: `
           <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-          <style>
-            .n8n-chat-button { 
-              width: 70px !important; 
-              height: 70px !important; 
-              background-color: #E6007E !important;
-              box-shadow: 0 4px 15px rgba(230,0,126,0.4) !important;
-            }
-            .n8n-chat-button svg { width: 35px !important; height: 35px !important; }
-          </style>
           <div id="n8n-chat"></div>
           <script type="module">
             import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
@@ -55,6 +46,13 @@ export default function Home() {
               bubbleColor: '#E6007E'
             });
           </script>
+          <style>
+            .n8n-chat-button { 
+              width: 70px !important; 
+              height: 70px !important; 
+              background-color: #E6007E !important;
+            }
+          </style>
         `
       }} />
       <Nav />
