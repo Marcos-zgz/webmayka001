@@ -19,7 +19,7 @@ export default function Nav({ logo }) {
 
   const menuItems = [
     { n: "Quién soy", l: "/quien-soy" },
-    { n: "Chat AI Maykay", l: "https://n8n-production-bc2e.up.railway.app/webhook/428e6420-d978-492e-accd-fe9037add400/chat" },
+    { n: "Chat AI Mayka", l: "https://n8n-production-bc2e.up.railway.app/webhook/428e6420-d978-492e-accd-fe9037add400/chat" },
     { n: "Entrevistas", l: "/entrevistas" },
     { n: "Conversaciones con Mayka", l: "/conversaciones" },
     { n: "Consultoría Organizacional", l: "/consultoria" },
