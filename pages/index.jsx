@@ -44,7 +44,7 @@ export default function Home() {
               welcomeMessage: 'Hola, soy Mayka. ¿En qué puedo ayudarte hoy?',
               title: 'Mayka Menacho - Canalizadora y Coach Holistico',
               mainColor: '#E6007E',
-              bubbleColor: '#E6007E',
+              bubbleColor: '#BDE0FE',
               bubbleAvatarUrl: '', // Puedes poner una URL de tu foto si quieres que salga en la burbuja
               placeholder: 'Escribe tu mensaje aquí...',
               // Ajustes para que resalte y la burbuja sea más grande
@@ -57,7 +57,7 @@ export default function Home() {
               .n8n-chat-button { 
                 width: 70px !important; 
                 height: 70px !important; 
-                background-color: #E6007E !important;
+                background-color: #BDE0FE !important;
                 box-shadow: 0 4px 15px rgba(230, 0, 126, 0.4) !important;
               }
               .n8n-chat-button svg { width: 35px !important; height: 35px !important; }
