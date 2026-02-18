@@ -30,7 +30,7 @@ export default function Home() {
       <Head>
         <title>Mayka Menacho</title>
       </Head>
-{/* CHAT INTEGRADO - MÉTODO ANTIBLOQUEO */}
+{/* CHAT PERSONALIZADO - MAYKA STYLE */}
       <div dangerouslySetInnerHTML={{
         __html: `
           <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
@@ -41,11 +41,28 @@ export default function Home() {
             createChat({
               webhookUrl: 'https://n8n-production-bc2e.up.railway.app/webhook/428e6420-d978-492e-accd-fe9037add400/chat',
               showWelcomeMessage: true,
-              welcomeMessage: 'Hola, soy Mayka. ¿En qué puedo acompañarte hoy?',
-              title: 'Mayka Menacho - Guía de Luz',
+              welcomeMessage: 'Hola, soy Mayka. ¿En qué puedo ayudarte hoy?',
+              title: 'Mayka Menacho - Canalizadora y Coach Holistico',
               mainColor: '#E6007E',
               bubbleColor: '#E6007E',
+              bubbleAvatarUrl: '', // Puedes poner una URL de tu foto si quieres que salga en la burbuja
+              placeholder: 'Escribe tu mensaje aquí...',
+              // Ajustes para que resalte y la burbuja sea más grande
+              iFrameStyle: 'position: fixed; bottom: 30px; right: 30px; z-index: 9999; border: none; width: 400px; height: 600px;',
             });
+            
+            // Forzamos que la burbuja sea un poco más grande mediante CSS
+            const style = document.createElement('style');
+            style.innerHTML = \`
+              .n8n-chat-button { 
+                width: 70px !important; 
+                height: 70px !important; 
+                background-color: #E6007E !important;
+                box-shadow: 0 4px 15px rgba(230, 0, 126, 0.4) !important;
+              }
+              .n8n-chat-button svg { width: 35px !important; height: 35px !important; }
+            \`;
+            document.head.appendChild(style);
           </script>
         `
       }} />
