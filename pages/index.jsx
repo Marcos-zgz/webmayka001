@@ -31,7 +31,7 @@ export default function Home() {
         <title>Mayka Menacho</title>
       </Head>
 
-     {/* INYECCIÓN DEL CHAT CORREGIDA */}
+{/* INYECCIÓN DEL CHAT CORREGIDA */}
       <div dangerouslySetInnerHTML={{
         __html: `
           <script type="module">
