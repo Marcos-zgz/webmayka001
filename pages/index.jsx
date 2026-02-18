@@ -30,37 +30,30 @@ export default function Home() {
       <Head>
         <title>Mayka Menacho</title>
       </Head>
- {/* CHAT MAYKA - VERSIÓN FORZADA ANTICACHÉ o*/}
+{/* CHAT MAYKA - VERSIÓN CORREGIDA PARA VERCEL */}
       <div dangerouslySetInnerHTML={{
         __html: `
           <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+          <style>
+            .n8n-chat-button { 
+              width: 70px !important; 
+              height: 70px !important; 
+              background-color: #E6007E !important;
+              box-shadow: 0 4px 15px rgba(230,0,126,0.4) !important;
+            }
+            .n8n-chat-button svg { width: 35px !important; height: 35px !important; }
+          </style>
           <div id="n8n-chat"></div>
           <script type="module">
-            // El ?v=${Date.now()} obliga a descargar el código nuevo siempre
-            import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js?v=${Date.now()}';
-
-       createChat({
+            import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+            createChat({
               webhookUrl: 'https://n8n-production-bc2e.up.railway.app/webhook/428e6420-d978-492e-accd-fe9037add400/chat',
               showWelcomeMessage: true,
               welcomeMessage: 'Hola, soy Mayka. ¿En qué puedo acompañarte hoy?',
               title: 'Mayka Menacho - Guía de Luz',
               mainColor: '#E6007E',
-              bubbleColor: '#E6007E',
-              iFrameStyle: 'position: fixed; bottom: 30px; right: 30px; z-index: 9999; border: none; width: 400px; height: 600px;',
+              bubbleColor: '#E6007E'
             });
-
-            // ESTO ES LO QUE HARÁ QUE RESALTE SÍ O SÍ
-            const cssCustom = document.createElement('style');
-            cssCustom.innerHTML = `
-              .n8n-chat-button { 
-                width: 75px !important; 
-                height: 75px !important; 
-                background-color: #E6007E !important;
-                box-shadow: 0 10px 25px rgba(230, 0, 126, 0.5) !important;
-              }
-              .n8n-chat-button svg { width: 40px !important; height: 40px !important; }
-            `;
-            document.head.appendChild(cssCustom);
           </script>
         `
       }} />
