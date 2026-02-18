@@ -30,7 +30,7 @@ export default function Home() {
       <Head>
         <title>Mayka Menacho</title>
       </Head>
- {/* CHAT MAYKA - VERSIÓN FORZADA ANTICACHÉ */}
+ {/* CHAT MAYKA - VERSIÓN FORZADA ANTICACHÉ o*/}
       <div dangerouslySetInnerHTML={{
         __html: `
           <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
