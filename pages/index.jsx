@@ -31,29 +31,21 @@ export default function Home() {
         <title>Mayka Menacho</title>
       </Head>
 
-      {/* INYECCIÓN DIRECTA DEL CHAT (Sustituye al Script anterior) */}
+     {/* INYECCIÓN DEL CHAT CORREGIDA */}
       <div dangerouslySetInnerHTML={{
         __html: `
-          <script type="module" src="https://scripts.n8n.io/chat.js"></script>
-          <script>
-            function initMaykaChat() {
-              if (window.createChat) {
-                window.createChat({
-                  webhookUrl: 'https://n8n-production-bc2e.up.railway.app/webhook/428e6420-d978-492e-accd-fe9037add400/chat',
-                  webhookConfig: { method: 'POST' },
-                  showWelcomeMessage: true,
-                  welcomeMessage: 'Hola, soy Mayka. ¿En qué puedo acompañarte hoy?',
-                  title: 'Mayka Menacho - Guía de Luz',
-                  mainColor: '#E6007E',
-                  bubbleColor: '#E6007E'
-                  // ESTO FUERZA A QUE SE VEA SIEMPRE ARRIBA
-  iFrameStyle: 'position: fixed; bottom: 20px; right: 20px; z-index: 999999;'
-                });
-              } else {
-                setTimeout(initMaykaChat, 100);
-              }
-            }
-            initMaykaChat();
+          <script type="module">
+            import { createChat } from 'https://scripts.n8n.io/chat.js';
+            
+            createChat({
+              webhookUrl: 'https://n8n-production-bc2e.up.railway.app/webhook/428e6420-d978-492e-accd-fe9037add400/chat',
+              webhookConfig: { method: 'POST' },
+              showWelcomeMessage: true,
+              welcomeMessage: 'Hola, soy Mayka. ¿En qué puedo acompañarte hoy?',
+              title: 'Mayka Menacho - Guía de Luz',
+              mainColor: '#E6007E',
+              bubbleColor: '#E6007E'
+            });
           </script>
         `
       }} />
