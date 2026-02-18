@@ -30,25 +30,7 @@ export default function Home() {
       <Head>
         <title>Mayka Menacho</title>
       </Head>
-{/* CHAT MAYKA - VERSIÓN LIMPIA DEFINITIVA */}
-      <div dangerouslySetInnerHTML={{
-        __html: '<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />' +
-        '<div id="n8n-chat"></div>' +
-        '<script type="module">' +
-        'import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";' +
-        'createChat({' +
-        'webhookUrl: "https://n8n-production-bc2e.up.railway.app/webhook/428e6420-d978-492e-accd-fe9037add400/chat",' +
-        'showWelcomeMessage: true,' +
-        'welcomeMessage: "Hola, soy Mayka. ¿En qué puedo acompañarte hoy?",' +
-        'title: "Mayka Menacho - Guía de Luz",' +
-        'mainColor: "#E6007E",' +
-        'bubbleColor: "#E6007E"' +
-        '});' +
-        '</script>' +
-        '<style>' +
-        '.n8n-chat-button { width: 70px !important; height: 70px !important; background-color: #E6007E !important; bottom: 30px !important; right: 30px !important; }' +
-        '</style>'
-      }} />
+
       <Nav />
       
       <main style={{ maxWidth: '1100px', margin: '0 auto', paddingTop: '140px', paddingLeft: '20px', paddingRight: '20px' }}>
