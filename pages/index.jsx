@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Nav from "../components/nav";
 import Image from "next/image";
@@ -6,7 +6,7 @@ import Script from "next/script"; // Importamos el componente de Script
 
 export default function Home() {
   const servicios = [
-    { t: "CONVERSACIONES CON MAYKA", d: "Sesiones de coaching personalizadas para desbloquear tu potencial.", p: "/talk-to-mayka" },
+    { t: "CONVERSACIONES CON MAYKA", d: "Sesiones de coaching personalizadas para desbloquear tu potencial.", p: "/conversaciones" },
     { t: "CONSULTORÍA ORGANIZACIONAL", d: "Acompañamiento estratégico para empresas y equipos con alma.", p: "/consultoria" },
     { t: "MENSAJES DEL MÁS ALLÁ", d: "Conexión y guía en tu viaje personal a través de la intuición.", p: "/mensajes" },
     { t: "CANALIZACIÓN A DISTANCIA", d: "Conecta con tus guías, seres queridos o tu esencia interior. Informe detallado o audio personalizado.", p: "/canalizacion" },
